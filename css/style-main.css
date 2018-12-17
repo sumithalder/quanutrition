@@ -2896,16 +2896,27 @@ form .error {
   text-align: center;
 }
 .portfolio-filter a {
-  color: #FF5722 !important;
+  color: #FFFFFF !important;
   display: inline-block;
   float: none;
   font-size: 16px;
   font-weight: 600 !important;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
   line-height: normal;
   margin-right: 5px;
   outline: medium none;
   padding: 5px 15px;
 }
+.portfolio-filter a:hover {
+  color: #FF5722 !important;
+}
+.portfolio-filter a:active {
+  color: #FF5722 !important;
+} 
+.portfolio-filter a:focus {
+  color: #FF5722 !important;
+} 
 /* -------- Portfolio Isotop Gallery ---------- */
 .portfolio-gallery {
   /*gutter*/
@@ -5361,6 +5372,105 @@ blockquote p {
     min-height: 300px;
   }
 }
+
+.card-1 {
+  float: left;
+  min-height: 250px;
+  padding-bottom: 25%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.card-1:nth-child(1) {
+  margin-left: -3px;
+  margin-right: 1px;
+}
+.card-1:nth-child(1),
+.card-1 .card:nth-child(3) {
+  margin-right: 1px;
+}
+.card-1 .card__front,
+.card-1 .card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.card-1 .card__back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.card-1 .card__text {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  line-height: 20px;
+}
+.card-1 .card__text .img_card {
+  height: 202px;
+  width: 100%;
+}
+.card-1.effect__hover:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.card-1.effect__hover:hover .card__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+.card-1.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.card-1.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+.card-1.effect__random.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.card-1.effect__random.flipped .card__back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+/*
+ * Responsive : Flip Box
+ * -----------------------------------------------
+*/
+@media only screen and (max-width: 767px) {
+  .card-1 {
+    margin-bottom: 30px;
+    min-height: 489px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  .card-1 {
+    margin-bottom: 30px;
+    min-height: 400px;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 500px) {
+  .card-1 {
+    margin-bottom: 30px;
+    min-height: 350px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 449px) {
+  .card-1 {
+    margin-bottom: 30px;
+    min-height: 300px;
+  }
+}
 /*
  * Shortcode: font-icons-style.less
  * -----------------------------------------------
@@ -6741,8 +6851,10 @@ blockquote p {
 }
 .panel-group .panel-title a {
   background: #eeeeee;
+  color: #fff;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   padding: 10px 15px 10px 48px;
   white-space: normal;
 }

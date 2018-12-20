@@ -65,6 +65,10 @@ body.dark {
 .dark .bg-light-1 {
   background-color: #FF5722 !important;
 }
+.dark .bg-light-01 {
+  background-color: #202020 !important;
+  border-top: 6px solid #ff5722 !important;
+}
 .dark .bg-lighter {
   background-color: #262626 !important;
 }

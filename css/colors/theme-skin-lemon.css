@@ -101,7 +101,9 @@ COLOR CODE: #FF5722
 .stylish-header,
 .stylish-header:before {
   background: #202020;
+  border-bottom: 6px solid #ff5722 !important;
 }
+
 /*
  * text: theme-color
  * -----------------------------------------------
@@ -133,13 +135,13 @@ blockquote {
   -o-border-top: 80px solid #ff5f2c;
   border-top: 80px solid #ff5f2c;
 }*/
-.stylish-header:after {
+/*.stylish-header:after {
   -webkit-border-top: 80px solid #202020;
   -moz-border-top: 80px solid #202020;
   -ms-border-top: 80px solid #202020;
   -o-border-top: 80px solid #202020;
   border-top: 80px solid #202020;
-}
+}*/
 /* border-bottom-color */
 .border-bottom {
   border-bottom: 1px solid #FF5722;

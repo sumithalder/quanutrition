@@ -59,6 +59,39 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+  .sidebar-box {
+    max-height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sidebar-box .read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 30px 0; 
+    
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, grey);
+  }
+  .sidebar-box p {
+    color: #333;
+  }
+  .sidebar-box .read-more a {
+    color: #202020;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8%;
+    left: 35%;
+  }
+  .height_space_2 {
+    content: "";
+    display: block;
+    height: 45px;
+  }
+</style>
 </head>
 <body class="dark">
 <div id="wrapper">
@@ -95,6 +128,9 @@
                 <li class="pl-10 pr-10 mb-0 pb-0">
                   <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> devika@quanutrition.com </div>
                 </li>
+                <li class="pl-10 pr-10 mb-0 pb-0">
+                  <div class="header-widget text-white"><a href="#" class="btn btn-theme-colored btn-flat btn-sm" role="button">Schedule a call</a></div>
+                </li>
               </ul>
             </div>
           </div>
@@ -112,7 +148,7 @@
       </div>
     </div>
     <div class="header-nav">
-      <div class="header-nav-wrapper bg-light-1 navbar-scrolltofixed">
+      <div class="header-nav-wrapper bg-light-01 navbar-scrolltofixed">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -154,89 +190,238 @@
 
   <!-- Start main-content -->
   <div class="main-content">
-    
-    <!-- Section: About -->
-    <section id="about">
+
+    <!-- Section: Classes details -->
+    <section>
       <div class="container">
         <div class="section-content">
           <div class="row">
-            <div class="col-md-5">
-              <div class="class-item box-hover-effect effect1">
-                  <div class="thumb"> <a href="#">
-                    <img class="img-fullwidth mb-20" src="../images/p3.jpg" alt="..."></a>
+            <div class="col-md-9">
+              <div class="single-class-details">
+                <img src="../images/p3.jpg" class="img-fullwidth" alt="">
+                <div class="pull-left flip">
+                  <h3 class="text-uppercase letter-space-1">Nutrition Weight loss</h3>
+                </div>
+                <!-- <div class="pull-right flip">
+                  <p class="font-16 mt-20">Mon to Fri : 6am to 8pm</p>
+                </div> -->
+              </div>
+              <div class="classes-schedules pt-20">
+                <p>You have tried every trick in the book, taken all advice, followed every fad, bought the latest equipment, and done everything, including not eating at all and you never see results. Or you gain it all back shortly after dropping weight. Whatever the roadblock, a qualified nutritionist understanding you personally can thoughtfully and effectively help. </p>
+                <p>The reason why all the diets and the self-help books do not help, because they were designed for maybe one person in the whole world, and that person isn’t You ! The solution is to find a nutritionist, who will help you make that diet for you that will work, and it sticks, and give you long standing results. They can help you understand the science behind how food fuels your body, how to achieve balance in your food choices, and provide accountability to keep you on track. </p>
+                <p style="margin-top: 20px;margin-bottom: 20px;">It is not about eating less, but eating right and in the correct quantity that will help you lose weight and keep it off. Losing weight and losing weight in a healthy manner are two very different things. Learning how to lose weight—while eating healthy and avoiding nutritional deficiencies—is key to sustaining good health and even keeping the weight off.</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p style="text-align: justify; border: 1px solid #ccc; padding: 10px 10px 10px 10px;">It is not about following a diet, it is about following a program for you. The biggest mistake with dieters is that they go into a diet with the intention of being overly strict on what they allow themselves to eat. The problem is that when they slip up and cheat, they see it as absolute failure and quit the entire idea. The result is a retiring back to old, bad habits. You need to approach dieting with a flexible mind-set, allowing yourself to have food, here and there, that goes along with the program through a guided approach, of a nutritionist who understands when to pull you back. Otherwise, you will drive yourself nuts and end up worse off than when you started.</p>
                   </div>
+                  <div class="col-md-6">
+                     <iframe height="300" src="https://www.youtube.com/embed/YS_Ff7ZSybY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <h3>Women:</h3>
+                <p>It is not just that time of the month. And it is not just one week of going on a cleanse and wondering why a month later you've gained back the weight. We are talking about a consistent lack of ability to lose weight despite doing all the right things like working out, eating right, and getting enough sleep.  </p>
+                <p> There is a lot more to good nutrition than meets the eye. Meeting with a Qua Nutrition nutritionist can help evaluate some of your pitfalls you may not be aware of. </p>
+                <p>Losing weight is every woman's nemesis.</p>
+                <p>You want to fit into that outfit you loved at the store so you start off by starving yourself. Not to forget the well-meaning advice from well-wishers on how to lose weight. Nothing seems to work because what worked for others is not the plan that was designed for your body type. No wonder you are close to giving up, and feel that this is your last chance.</p>
+                <p>A sensible weight loss program allows you to lose weight slowly. It can range from 500gms to 1Kg per week. Gradual weight loss promotes loss of body fat instead of water loss from the body, which is harmful and gets replenished very fast. At Qua Nutrition the team of nutritionists will design a customized nutrition plan that works in way that your body would respond best to.</p>
+                <p>At Qua Nutrition Health our nutrition experts will hand hold you through the process of losing weight by designing a nutrition plan with supplement strategy exclusively for you. So go ahead and binge on that slinky outfit!</p>
+                <h3>Men:</h3>
+                <p>Gone are the days when a beer gut, a fart and a burp were considered manly. Everyone knows that belly fat is nothing to joke about. To lose that gut, you probably started with some small exercises but in the absence of any noticeable difference, you are not motivated to continue. You look towards advice of your better looking friends, trainers, search engines and self-suggesting supplements. You could end up with a screwed up gut, system or back as you haven’t planned a nutrition plan for your goals. </p>
+                <p>Do you know loosing fat is 70 % nutrition and 30 % exercise? </p>
+                <p>What you need is a customized nutrition plan clubbed with those small efforts you are taking to lose that increasing waist line. At Qua Nutrition, the team of expert nutritionists will work with you and design a nutrition plan and supplement strategy exclusively suiting your body chemistry and metabolism. Cheers in saying goodbye to that belly fat.</p>
+                <h3>Children </h3>
+                <p>Childhood obesity can lead to diabetes, high blood pressure and high cholesterol. There may be no symptoms other than weight that's above normal. Improving the entire family's diet and exercise habits is one of the best ways to achieve a healthy weight in the child. Children become overweight for a variety of reasons. The most common causes are lack of physical activity, unhealthy eating habits, genetic factors or a combination of these factors. There will be rare cases in which being overweight is caused by a medical condition such as a hormonal problem. A child's total diet and activity level play the important role in determining a child's weight. </p>
+                <p>Besides the medical implication of excess weight, it does have emotional and psychological changes on the child as well.</p> 
+                <p>Best is to find a long term solution and work with a specialised Child Nutritionist at Qua Nutrition, who can help understanding the relevant changes that you need to make to get your child in frame of correct health and weight. </p>
               </div>
             </div>
-            <div class="col-md-7">
-                  <h3 class="text-uppercase letter-space-1 mt-0">Nutrition Weight loss</h3>
-                  <p style="text-align: justify;">You have tried every trick in the book, taken all advice, followed every fad, bought the latest equipment, and done everything, including not eating at all…</p>
-                  <p style="text-align: justify;">...and you never see results. Or you gain it all back shortly after dropping weight. Whatever the roadblock, a qualified nutritionist understanding you personally can thoughtfully and effectively help. </p>
-                  <p style="text-align: justify;">The reason why all the diets and the self-help books do not help, because they were designed for maybe one person in the whole world, and that person isn’t You ! The solution is to find a nutritionist, who will help you make that diet for you that will work, and it sticks, and give you long standing results. They can help you understand the science behind how food fuels your body, how to achieve balance in your food choices, and provide accountability to keep you on track. </p>
+            <div class="col-md-3 pl-60 pl-sm-0 mt-sm-60">
+              <div class="widget">
+                <h4 class="widget-title text-uppercase bg-theme-colored p-10 text-white text-center">Testimonials</h4>
+                <div class="latest-posts">
+                  <article class="post media-post clearfix pb-0 mb-10 text-center">
+                      <img width="120" height="120" src="../images/gallery/1.jpg" alt="" class="img-circle">
+                      <h4 class="post-title mt-10 mb-5 text-theme-colored mb-0">Shikhar Dhawan</h4>
+                      <p class="text-gray font-13">Nutrition plays a key role in my recovery and performance. Using Sports Gene testing and advance nutritional blood biochemistry helps me. Eating with a plan gets more scientific and result oriented this way.</p>
+                  </article>
+                  <article class="post media-post clearfix pb-0 mb-10 text-center">
+                      <img width="120" height="120" src="../images/gallery/2.jpg" alt="" class="img-circle">
+                      <h4 class="post-title mt-10 mb-5 text-theme-colored mb-0">Robin Uthappa</h4>
+                      <p class="text-gray font-13">The team at QUA NUTRITION has helped me change the way I eat for performance. My weight loss and muscle gain is there for everbody to see.</p>
+                  </article>
+                  <article class="post media-post clearfix pb-0 mb-10 text-center">
+                      <img width="120" height="120" src="../images/gallery/3.jpg" alt="" class="img-circle">
+                      <h4 class="post-title mt-10 mb-5 text-theme-colored mb-0">Shubhankar Sharma</h4>
+                      <p class="text-gray font-13">Being a vegetarian, it is difficult to meet your protein needs on time. Working with a structured Nutrition Plan allows me to. Also understanding my vitamin and fat absorption genes, I was able to work with my Sports Nutritionist to fuel when on hectic matches across the World. </p>
+                  </article>
+                  <article class="post media-post clearfix pb-0 mb-10 text-center">
+                      <img width="120" height="120" src="../images/gallery/6.jpg" alt="" class="img-circle">
+                      <h4 class="post-title mt-10 mb-5 text-theme-colored mb-0">K Kiran Kumar Raju</h4>
+                      <p class="text-gray font-13">Been associated with QUA Nutrition for the past 5months. It's been an awesome time understanding aspects and importance of nutrition. They have the best team to help you with micro details of nutrition and closely work with individuals on regular intervals with utmost patience understanding specific needs. </p>
+                  </article>
+                  
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="row mt-30 text-justify">
-            <div class="col-md-6">
-              <p>It is not about eating less, but eating right and in the correct quantity that will help you lose weight and keep it off. Losing weight and losing weight in a healthy manner are two very different things. Learning how to lose weight—while eating healthy and avoiding nutritional deficiencies—is key to sustaining good health and even keeping the weight off.</p>
-              <p style="text-align: justify;">It is not about following a diet, it is about following a program for you. The biggest mistake with dieters is that they go into a diet with the intention of being overly strict on what they allow themselves to eat. The problem is that when they slip up and cheat, they see it as absolute failure and quit the entire idea. The result is a retiring back to old, bad habits. You need to approach dieting with a flexible mind-set, allowing yourself to have food, here and there, that goes along with the program through a guided approach, of a nutritionist who understands when to pull you back. Otherwise, you will drive yourself nuts and end up worse off than when you started.</p>
-            </div>
-            <div class="col-md-6">
-               <iframe height="300" src="https://www.youtube.com/embed/YS_Ff7ZSybY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-12">
-            <h4>Women:</h4>
-            <p style="text-align: justify;">It is not just that time of the month. And it is not just one week of going on a cleanse and wondering why a month later you've gained back the weight. We are talking about a consistent lack of ability to lose weight despite doing all the right things like working out, eating right, and getting enough sleep.  </p>
-            <p style="text-align: justify;"> There is a lot more to good nutrition than meets the eye. Meeting with a Qua Nutrition nutritionist can help evaluate some of your pitfalls you may not be aware of. </p>
-            <p style="text-align: justify;">Losing weight is every woman's nemesis.</p>
-            <p style="text-align: justify;">You want to fit into that outfit you loved at the store so you start off by starving yourself. Not to forget the well-meaning advice from well-wishers on how to lose weight. Nothing seems to work because what worked for others is not the plan that was designed for your body type. No wonder you are close to giving up, and feel that this is your last chance.</p>
-            <p style="text-align: justify;">A sensible weight loss program allows you to lose weight slowly. It can range from 500gms to 1Kg per week. Gradual weight loss promotes loss of body fat instead of water loss from the body, which is harmful and gets replenished very fast. At Qua Nutrition the team of nutritionists will design a customized nutrition plan that works in way that your body would respond best to.</p>
-            <p style="text-align: justify;">At Qua Nutrition Health our nutrition experts will hand hold you through the process of losing weight by designing a nutrition plan with supplement strategy exclusively for you. So go ahead and binge on that slinky outfit!</p>
-            <h3>Men:</h3>
-            <p style="text-align: justify;">Gone are the days when a beer gut, a fart and a burp were considered manly. Everyone knows that belly fat is nothing to joke about. To lose that gut, you probably started with some small exercises but in the absence of any noticeable difference, you are not motivated to continue. You look towards advice of your better looking friends, trainers, search engines and self-suggesting supplements. You could end up with a screwed up gut, system or back as you haven’t planned a nutrition plan for your goals. </p>
-            <p style="text-align: justify;">Do you know loosing fat is 70 % nutrition and 30 % exercise? </p>
-            <p style="text-align: justify;">What you need is a customized nutrition plan clubbed with those small efforts you are taking to lose that increasing waist line. At Qua Nutrition, the team of expert nutritionists will work with you and design a nutrition plan and supplement strategy exclusively suiting your body chemistry and metabolism. Cheers in saying goodbye to that belly fat.</p>
-            <h3>Children </h3>
-            <p style="text-align: justify;">Childhood obesity can lead to diabetes, high blood pressure and high cholesterol. There may be no symptoms other than weight that's above normal. Improving the entire family's diet and exercise habits is one of the best ways to achieve a healthy weight in the child. Children become overweight for a variety of reasons. The most common causes are lack of physical activity, unhealthy eating habits, genetic factors or a combination of these factors. There will be rare cases in which being overweight is caused by a medical condition such as a hormonal problem. A child's total diet and activity level play the important role in determining a child's weight. </p>
-            <p style="text-align: justify;">Besides the medical implication of excess weight, it does have emotional and psychological changes on the child as well.</p> 
-            <p style="text-align: justify;">Best is to find a long term solution and work with a specialised Child Nutritionist at Qua Nutrition, who can help understanding the relevant changes that you need to make to get your child in frame of correct health and weight. </p>
-           </div>
           </div>
         </div>
       </div>
     </section>
+    
 
+    <!-- Section: Team -->
+    <section id="trainer" class="bg-light">
+      <div class="container">
+        <div class="section-title text-center">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="text-uppercase text-left">Our <span class="text-black font-weight-300">TESTIMONIALS</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="section-content pb-10">
+          <div class="row-carousel owl-carousel-5col pb-30">
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/1.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Shikhar Dhawan</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Cricketer </h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">Nutrition plays a key role in my recovery and performance. Using Sports Gene testing and advance nutritional blood biochemistry helps me. Eating with a plan gets more scientific and result oriented this way.</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/2.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Robin Uthappa</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Cricketer</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">The team at QUA NUTRITION has helped me change the way I eat for performance. My weight loss and muscle gain is there for everbody to see.</p>
+                    <div class="height_space_2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/3.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Shubhankar Sharma</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Golfer</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">Being a vegetarian, it is difficult to meet your protein needs on time. Working with a structured Nutrition Plan allows me to. Also understanding my vitamin and fat absorption genes, I was able to work with my Sports Nutritionist to fuel when on hectic matches across the World. </p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/5.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Joshna Chinappa</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Squash Player</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">As an athlete I was aware of the importance of good nutrition to compliment my training and my matches. But after joining QUA is when I realized how much of my old habits I needed to change in order to be the best athlete I can be mentally and physically. I have been working with Lakshmi and Ryan for a few months now and their inputs and meal plans have been able to take my game and training to another level. I have seen a huge difference so soon after working with them. Their knowledge and expertise is something I count on almost everyday whether it’s during training or playing tournaments. Very Fortunate to have Ryan and Lakshmi on my team to help me be the best athlete I can be.</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-half-offset mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="images/gallery/4.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">BCCI Women's Cricket Team</h4>
+                  <h6 class="text-theme-colored mt-0 mb-5 text-center">Cricket</h6>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">"BCCI Women's Cricket Team</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/6.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">K Kiran Kumar Raju</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Biker</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">Been associated with QUA Nutrition for the past 5months. It's been an awesome time understanding aspects and importance of nutrition. They have the best team to help you with micro details of nutrition and closely work with individuals on regular intervals with utmost patience understanding specific needs.</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/7.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Sushil Kumar</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Wrestler</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">I worked with Sushil for two Olympics. Our focus was better diets, Superfoods, and supplements. We also integrated high-end sports testing which allowed us to boost nutrition to help in quicker recoveries between bouts. Till date, his two Olympic medals are the biggest success we have obtained in sports nutrition - Ryan Fernando, Nutrition Coach to Sushil Kumar</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/8.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Jennifer Luikham</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Tennis</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">"Learning to eat for power, endurance and recovery was like going back to school.The team of Nutritionists kept designing the 7- day Nutrition Plans based on my training, competition and even travel. Eating disciplined is difficult. But once I understood my Sports and Nutrition gene test results, I began eating with a purpose for performance and recovery."</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-half-offset mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="images/gallery/9.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Supriyo Mondal</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Swimmer</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">Working with Qua Nutrition makes me understand that I cannot cheat on my diet. I have to be disciplined, so as to perform better. They help to keep me on track by talking to me and guiding me</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="item mb-30 mb-sm-30">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/10.jpg" alt="">
+                  <h4 class="text-gray mt-5 mb-5 text-center">Trishul Chinappa</h4>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Golfer</h5>
+                  <div class="sidebar-box">
+                    <p class="mt-0 mb-0 p-10 text-center">My body is my temple. Hence I do my best to eat right and train well. When I started off at Qua Nutrition 4 years ago, I got a good idea of what a balanced meal should consist of and how to eat three solid meals through the day. Over time I've learned about different kinds of food and how they affect and contribute to my well-being and performance through the diet plans I have followed. The team at Qua -both Ryan Fernando and Lygia Correia constantly keep a tab on my body parameters and together we work to improve on them. My main improvement has been on the gold course. Knowledge of what to eat pre, during and post my tournament rounds, practice session, and workouts has helped me stay energetic and focused on my goals.</p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   <!-- end main-content -->
 
   <!-- Footer -->
   <footer class="footer divider layer-overlay overlay-dark" data-bg-img="../images/bg/bg1.jpg">
     <div class="container pt-100 pb-30">
-      <!-- <div class="row mb-50">
-        <div class="col-sm-4 col-md-4 mb-sm-60">
-          <div class="contact-icon-box p-30">
-            <div class="contact-icon bg-theme-colored"> <i class="fa fa-map-marker text-white font-22"></i> </div>
-            <h4 class="text-uppercase text-white">Address</h4>
-            <p class="font-16">09 Movers and Packers,Design Street,Victoria,Australia</p>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-4 mb-sm-60">
-          <div class="contact-icon-box p-30">
-            <div class="contact-icon bg-theme-colored"> <i class="fa fa-envelope-o text-white font-22"></i> </div>
-            <h4 class="text-uppercase text-white">mail us</h4>
-            <p class="font-16">Get support via <br>
-              <a class="" href="mailto:mail@kodesolution.com" target="_top">email : mail@kodesolution.com </a> </p>
-          </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-          <div class="contact-icon-box p-30">
-            <div class="contact-icon bg-theme-colored"> <i class="fa fa-phone text-white font-22"></i> </div>
-            <h4 class="text-uppercase text-white">PHONE / FAX</h4>
-            <p class="font-16">+1 123 456 789 <br>
-              +1 123 456 789</p>
-          </div>
-        </div>
-      </div> -->
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <div class="widget dark"> <img class="mt-10 mb-20" alt="" src="../images/logo.png">
@@ -252,42 +437,49 @@
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
             <h5 class="widget-title line-bottom">Pages</h5>
-            <ul class="list angle-double-right list-border">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="../package.html">Packages</a></li>
-              <li><a href="../about.html">Why Qua?</a></li>
-              <li><a href="../testimonial.html">Testimonials</a></li>
-              <li><a href="../video.html">Video</a></li>
-              <li><a href="../team.html">Team</a></li>
-              <li><a href="#">Nutritional Facts</a></li>
-              <li><a href="../contact.html">Contact Us</a></li>
-            </ul>
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <ul class="list angle-double-right list-border">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../package.html">Packages</a></li>
+                  <li><a href="../about.html">Why Qua?</a></li>
+                  <li><a href="../testimonial.html">Testimonials</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <ul class="list angle-double-right list-border">
+                  <li><a href="../video.html">Video</a></li>
+                  <li><a href="../team.html">Team</a></li>
+                  <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4">
           <div class="widget dark tags">
             <h5 class="widget-title line-bottom">Tags</h5>
-            <a href="sports_nutrition.html"><p>Sports Nutrition</p></a>
-            <a href="weight_loss_trim_down.html"><p>Weight Loss</p></a>
-            <a href="weight_gain.html"><p>Weight Gain</p></a>
-            <a href="genetic_nutrition.html"><p>Genetic Testing</p></a>
-            <a href="sports_nutrition.html"><p>Best Sports Nutritionist Delhi</p></a>
-            <a href="nutrition_kids.html"><p>Nutrition For Kids</p></a>
-            <a href="genetic_nutrition.html"><p>Best Nutritionist</p></a>
-            <a href="nutrition_men.html"><p>Nutrition for men</p></a>
-            <a href="nutrition_women.html"><p>Nutrition for women</p></a>
-            <a href="sports_nutrition.html"><p>Best Sports Nutritionist</p></a>
-            <a href="sports_nutrition.html"><p>Sports Nutritionist Chennai</p></a>
-            <a href="../index.html"><p>Best Nutritionist Goa</p></a>
-            <a href="wedding_bells.html"><p>Wedding Diet</p></a>
-            <a href="../index.html"><p>Best Nutritionist Kolkata</p></a>
-            <a href="medical_nutrition.html"><p>Medical Nutrition</p></a>
-            <a href="corporate_nutrition_plan.html"><p>Corporate Nutrition</p></a>
-            <a href="../contact.html"><p>Best Nutritionist Bangalore</p></a>
-            <a href="../index.html"><p>Best Nutritionist Mumbai</p></a>
-            <a href="../index.html"><p>Beauty</p></a>
-            <a href="../about.html"><p>Best Nutritionist India</p></a>
-            <a href="international_counselling.html"><p>International Nutritionist</p></a>
+            <a href="sports_nutrition.html"><p style="font-size: 10px;">Sports Nutrition</p></a>
+            <a href="weight_loss_trim_down.html"><p style="font-size: 10px;">Weight Loss</p></a>
+            <a href="weight_gain.html"><p style="font-size: 10px;">Weight Gain</p></a>
+            <a href="genetic_nutrition.html"><p style="font-size: 10px;">Genetic Testing</p></a>
+            <a href="sports_nutrition.html"><p style="font-size: 10px;">Best Sports Nutritionist Delhi</p></a>
+            <a href="nutrition_kids.html"><p style="font-size: 10px;">Nutrition For Kids</p></a>
+            <a href="genetic_nutrition.html"><p style="font-size: 10px;">Best Nutritionist</p></a>
+            <a href="nutrition_men.html"><p style="font-size: 10px;">Nutrition for men</p></a>
+            <a href="nutrition_women.html"><p style="font-size: 10px;">Nutrition for women</p></a>
+            <a href="sports_nutrition.html"><p style="font-size: 10px;">Best Sports Nutritionist</p></a>
+            <a href="sports_nutrition.html"><p style="font-size: 10px;">Sports Nutritionist Chennai</p></a>
+            <a href="../index.html"><p style="font-size: 10px;">Best Nutritionist Goa</p></a>
+            <a href="wedding_bells.html"><p style="font-size: 10px;">Wedding Diet</p></a>
+            <a href="../index.html"><p style="font-size: 10px;">Best Nutritionist Kolkata</p></a>
+            <a href="medical_nutrition.html"><p style="font-size: 10px;">Medical Nutrition</p></a>
+            <a href="corporate_nutrition_plan.html"><p style="font-size: 10px;">Corporate Nutrition</p></a>
+            <a href="../contact.html"><p style="font-size: 10px;">Best Nutritionist Bangalore</p></a>
+            <a href="../index.html"><p style="font-size: 10px;">Best Nutritionist Mumbai</p></a>
+            <a href="../index.html"><p style="font-size: 10px;">Beauty</p></a>
+            <a href="../about.html"><p style="font-size: 10px;">Best Nutritionist India</p></a>
+            <a href="international_counselling.html"><p style="font-size: 10px;">International Nutritionist</p></a>
           </div>
         </div>
         <div class="col-sm-6 col-md-2">
@@ -335,5 +527,40 @@
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script> 
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script> 
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+<script>
+  var $el, $ps, $up, totalHeight;
+
+  $(".sidebar-box .button").click(function() {
+        
+    totalHeight = 0
+
+    $el = $(this);
+    $p  = $el.parent();
+    $up = $p.parent();
+    $ps = $up.find("p:not('.read-more')");
+    
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function() {
+      totalHeight += $(this).outerHeight();
+    });
+          
+    $up
+      .css({
+        // Set height to prevent instant jumpdown when max height is removed
+        "height": $up.height(),
+        "max-height": 9999
+      })
+      .animate({
+        "height": totalHeight
+      });
+    
+    // fade out read-more
+    $p.fadeOut();
+    
+    // prevent jump-down
+    return false;
+      
+  });
+</script>
 </body>
 </html>

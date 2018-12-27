@@ -1796,7 +1796,7 @@ section > .container-fluid {
   padding: 0;
 }
 .menuzord-menu > li > a {
-  padding: 28px 15px 32px;
+  padding: 22px 15px 20px;
   font-size: 14px;
 }
 .menuzord-brand img {
@@ -1825,7 +1825,7 @@ section > .container-fluid {
   content: '';
   position: absolute;
   top: 0;
-  height: 106%;
+  height: 108%;
   left: -650px;
   width: 650px;
 }
@@ -1860,8 +1860,8 @@ section > .container-fluid {
   background-color: #202020 !important;
   position: absolute;
   z-index: 99;
-  width: 170px;
-  height: 88px;
+  width: 130px;
+  height: 87px;
   border-width: 100%;
   border-bottom: 7px solid #ff5722;
   border-bottom-style
@@ -1872,8 +1872,8 @@ section > .container-fluid {
       translateX(-35px)
       rotate(-33.5deg);
   position: absolute;
-  top: -39%;
-  left: 99%;
+  top: -64%;
+  left: 100%;
 }
 
 /*
@@ -2934,7 +2934,7 @@ form .error {
   float: none;
   font-size: 16px;
   font-weight: 600 !important;
-  border: 1px solid #fff;
+  border-right: 4px solid #ff5722;
   margin-bottom: 10px;
   line-height: normal;
   margin-right: 5px;
@@ -2943,12 +2943,15 @@ form .error {
 }
 .portfolio-filter a:hover {
   color: #FF5722 !important;
+  background-color: none;
 }
 .portfolio-filter a:active {
   color: #FF5722 !important;
+  background-color: none;
 } 
 .portfolio-filter a:focus {
   color: #FF5722 !important;
+  background-color: none;
 } 
 /* -------- Portfolio Isotop Gallery ---------- */
 .portfolio-gallery {
@@ -3212,7 +3215,6 @@ form .error {
 .portfolio-filter a.active,
 .portfolio-filter a:hover {
   color: #111111;
-  background-color: #f5f5f5;
 }
 /* -------- Portfolio Isotop Gallery ---------- */
 .gallery-isotope {
@@ -5408,7 +5410,7 @@ blockquote p {
 
 .card-1 {
   float: left;
-  min-height: 160px;
+  min-height: 216px;
   padding-bottom: 25%;
   position: relative;
   text-align: center;
@@ -5475,6 +5477,13 @@ blockquote p {
 .card-1.effect__random.flipped .card__back {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
+}
+.bg-theme-colored-001 {
+  background-color: #000;
+}
+.icon-box .icon-box-title {
+  color: #ff5722 !important;
+  font-weight: 700 !important;
 }
 /*
  * Responsive : Flip Box
@@ -5855,7 +5864,8 @@ blockquote p {
 }
 .icon-box .icon-box-title {
   margin-bottom: 15px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 700 !important;
 }
 .rotate {
   -webkit-transform: rotate(45deg);
@@ -7770,6 +7780,12 @@ table {
   background-color: #202020;
 }
 .menuzord-menu ul.dropdown li a b{
-  font-weight: 500;
+  font-weight: 700;
   font-size: 13px;
+  color: #202020;
+  padding: 1px;
+}
+
+.img-display {
+  display: none;
 }

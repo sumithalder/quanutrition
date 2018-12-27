@@ -59,20 +59,6 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-  .flex-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-auto-flow: row;
-  }
-
-  .flex-container > div {
-    background-color: #fff;
-    width: 180px;
-    height: auto;
-    margin: 5px;
-    text-align: center;
-
-  }
   .sidebar-box {
     position: relative;
     overflow: hidden;
@@ -88,22 +74,19 @@
     /* "transparent" only works here because == rgba(0,0,0,0) */
     background-image: linear-gradient(to bottom, transparent, grey);
   }
-  .sidebar-box p {
+  .sidebar-box {
     color: #333;
   }
-  .sidebar-box .read-more a {
+  .sidebar-box .read-more .collapsed,.expanded {
     color: #202020;
     font-weight: 700;
     position: absolute;
     bottom: 8%;
     left: 30%;
   }
-  #more {display: none;}
-  .morecontent span {
+  [aria-expanded="false"] > .expanded,
+  [aria-expanded="true"] > .collapsed {
     display: none;
-  }
-  .morelink {
-      display: inline-block;
   }
 </style>
 </head>
@@ -137,13 +120,13 @@
             <div class="widget m-0 mt-5 no-border">
               <ul class="list-inline text-right sm-text-center">
                 <li class="pl-10 pr-10 mb-0 pb-0">
-                  <div class="header-widget text-white"><i class="fa fa-phone"></i>+91-9743430000 </div>
+                  <div class="header-widget text-white"><i class="fa fa-phone"></i><a class="text-dark" href="tel: +91-9743430000">+91-9743430000</a></div>
                 </li>
                 <li class="pl-10 pr-10 mb-0 pb-0">
-                  <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> devika@quanutrition.com </div>
+                  <div class="header-widget text-white"><i class="fa fa-envelope-o"></i><a class="text-dark" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=devika@quanutrition.com" target=" "> devika@quanutrition.com </a></div>
                 </li>
                 <li class="pl-10 pr-10 mb-0 pb-0">
-                  <div class="header-widget text-white"><a href="#" class="btn btn-theme-colored btn-flat btn-sm" role="button">Schedule a call</a></div>
+                  <div class="header-widget text-white"><a href="#" class="btn btn-theme-colored btn-flat btn-sm" role="button" data-toggle="modal" data-target="#schedulecall">Schedule a call</a></div>
                 </li>
               </ul>
             </div>
@@ -151,10 +134,10 @@
           <div class="col-md-2 text-right flip sm-text-center">
             <div class="widget m-0">
               <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm">
-                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-linkedin text-white"></i></a></li>
+                <li class="mb-0 pb-0"><a href="https://www.facebook.com/QUAnutritionCLINICS/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li class="mb-0 pb-0"><a href="https://twitter.com/Qua_Nutrition?lang=en" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li class="mb-0 pb-0"><a href="https://www.instagram.com/qua.nutrition/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li class="mb-0 pb-0"><a href="https://www.youtube.com/user/quanutrition" target="_blank"><i class="fa fa-youtube text-white"></i></a></li>
               </ul>
             </div>
           </div>
@@ -166,10 +149,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand stylish-header stylish pull-left flip" href="javascript:void(0)"><img class="stylish-line" height="40" src="images/logo.png" alt=""></a>
+              <div id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand stylish-header stylish pull-left flip" href="javascript:void(0)" style="padding-bottom: 10px;"><img class="stylish-line" height="100" src="images/logo.png" alt="logo" style="margin-top: 6px;"></a>
                 <ul class="menuzord-menu">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="package.html">Packages</a>
+                  <li><a href="Nutrition_package.html">Packages</a>
                     <ul class="dropdown">
                       <li><a href="Nutrition_packages/sports_nutrition.html"><b>Sports Nutrition</b></a></li>
                       <li><a href="Nutrition_packages/weight_loss_trim_down.html"><b>Weight Loss</b></a></li>
@@ -177,8 +160,8 @@
                       <li><a href="Nutrition_packages/genetic_nutrition.html"><b>Genetic Testing</b></a></li>
                       <li><a href="Nutrition_packages/new_life.html"><b>New Life</b></a></li>
                       <li><a href="Nutrition_packages/nutrition_kids.html"><b>Nutrition For Kids</b></a></li>
-                      <li><a href="Nutrition_packages/nutrition_men.html"><b>Nutrition For Men</b></a></li>
-                      <li><a href="Nutrition_packages/nutrition_women.html"><b>Nutrition For Women</b></a></li>
+                      <li><a href="Nutrition_packages/nutrition_you.html"><b>Nutrition For You</b></a></li>
+                      <!-- <li><a href="Nutrition_packages/nutrition_women.html"><b>Nutrition For Women</b></a></li> -->
                       <li><a href="Nutrition_packages/beauty.html"><b>Beauty</b></a></li>
                       <li><a href="Nutrition_packages/wedding_bells.html"><b>Wedding Bells</b></a></li>
                       <li><a href="Nutrition_packages/mental_nutrition.html"><b>Mental Nutrition</b></a></li>
@@ -187,12 +170,12 @@
                       <li><a href="Nutrition_packages/international_counselling.html"><b>International Nutritional Plan</b></a></li>
                     </ul>
                   </li>
-                  <li><a href="about.html">Why Qua?</a></li>
-                  <li><a href="testimonial.html">Testimonials</a></li>
-                  <li><a href="video.html">Videos</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="#">Nutritional Facts</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="About.html">Why Qua?</a></li>
+                  <li><a href="Testimonials.html">Testimonials</a></li>
+                  <li><a href="Videos.html">Videos</a></li>
+                  <li><a href="Team.html">Team</a></li>
+                  <li><a href="https://quanutrition.com/nutritionalfacts" target="_blank">Nutritional Facts</a></li>
+                  <li><a href="Contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -218,567 +201,614 @@
           </div>
         </div>
         <div class="section-content pb-10">
-          <div class="flex-container pb-30">
-            <div class="mb-30 mb-sm-30 pl-0">
+          <div class="row pb-30">
+            <div class=" col-md-2 col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/ryan.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Ryan Fernando</h5>
+                  <h5 class="text-gray text-dark-01 text-dark-01 mt-5 mb-5 text-center">Ryan Fernando</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Chief Nutritionist </h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more" style="align-self: stretch;">Ryan Fernando is an Award winning celebrity Sports Nutritionist to a host of Athletes. Ryan’s clients include 2 GUINNESS world record Holders in feats of Human Endurance, 2 Olympic Medals with Wrestler l Sushil Kumar, Cricketers Robin Uthappa, ShikharDhawan, Harbhajan Singh, Praghyan Ojha, Golfing Diva Sharmila Nicollet and a host of South Indian Film stars and CEO’s. Ryan has worked with Bollywood Superstar AMIR KHAN with his NUTRITION GENE TESTING and bulked up role in a wrestling movie releasing in 2016. He recently was selected by an international jury at the ATP SPORTS & FITNESS CONVENTION 2015 for the award of " BEST PRACTICING NUTRITIONIST". Qua Nutrition under his leadership has built a proprietary software especially designed for Indians and is used as an exclusive scientific tool in designing clients custom nutrition plans. With a team of over 50 Nutritionist, an exclusive training Nutrition academy, and a quality control department checking every nutrition and supplement plan for its accuracy and ease of implementation, he has built a unique concept. This is called QUA or in latin it means " IN CAPAPCITY OF". Ryan thus allows any living individual to find their scientific balance for nutrition. Ryan also is a certified NUTRIGENOMICS counsellor the latest in revolutionary medical practice of integrating Genes with Nutritional Strategic insertion. Ryan counsels and consults with a few clients every month, but devotes most of his time to teaching and training his team, along with global travel on nutrition assignments. To Book an appointment with RYAN please call +919743430000. Ryan is the Co- founder of Qua Nutrition - Signature Nutrition Clinics. Lecturer for ISSA (International Society of Sports Association). A life Member with the NUTRITION SOCIETY of INDIA and A Commonwealth Scholar with 2 Masters Degrees, Food Biotechnology from the University of Strathclyde in Scotland and Clinical Biochemistry from the Goa Medical College. He is also a certified Performance Nutrition Expert. Ryan has conducted over a thousand lectures in the last decade at various forums on Sports and Fitness Nutrition. Ryan is responsible for the state of the Art software used at QUA NUTRITION to deliver customised nutrition plans to all walks of life. Ryan himself works only with his team of dedicated dietitians to deliver the best nutrition strategies. In addition to being a Nutritionist, Ryan is an alumnus of the prestigious IIM-A and is the CEO at QUA NUTRITION </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Ryan Fernando is an Award winning celebrity Sports Nutritionist to a host of Athletes. Ryan’s clients include 2 GUINNESS world record Holders in feats of Human Endurance, 2 Olympic Medals with Wrestler l Sushil Kumar,</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id"> Cricketers Robin Uthappa, ShikharDhawan, Harbhajan Singh, Praghyan Ojha, Golfing Diva Sharmila Nicollet and a host of South Indian Film stars and CEO’s. Ryan has worked with Bollywood Superstar AMIR KHAN with his NUTRITION GENE TESTING and bulked up role in a wrestling movie releasing in 2016. He recently was selected by an international jury at the ATP SPORTS & FITNESS CONVENTION 2015 for the award of " BEST PRACTICING NUTRITIONIST". Qua Nutrition under his leadership has built a proprietary software especially designed for Indians and is used as an exclusive scientific tool in designing clients custom nutrition plans. With a team of over 50 Nutritionist, an exclusive training Nutrition academy, and a quality control department checking every nutrition and supplement plan for its accuracy and ease of implementation, he has built a unique concept. This is called QUA or in latin it means " IN CAPAPCITY OF". Ryan thus allows any living individual to find their scientific balance for nutrition. Ryan also is a certified NUTRIGENOMICS counsellor the latest in revolutionary medical practice of integrating Genes with Nutritional Strategic insertion. Ryan counsels and consults with a few clients every month, but devotes most of his time to teaching and training his team, along with global travel on nutrition assignments. To Book an appointment with RYAN please call +919743430000. Ryan is the Co- founder of Qua Nutrition - Signature Nutrition Clinics. Lecturer for ISSA (International Society of Sports Association). A life Member with the NUTRITION SOCIETY of INDIA and A Commonwealth Scholar with 2 Masters Degrees, Food Biotechnology from the University of Strathclyde in Scotland and Clinical Biochemistry from the Goa Medical College. He is also a certified Performance Nutrition Expert. Ryan has conducted over a thousand lectures in the last decade at various forums on Sports and Fitness Nutrition. Ryan is responsible for the state of the Art software used at QUA NUTRITION to deliver customised nutrition plans to all walks of life. Ryan himself works only with his team of dedicated dietitians to deliver the best nutrition strategies. In addition to being a Nutritionist, Ryan is an alumnus of the prestigious IIM-A and is the CEO at QUA NUTRITION <br>&nbsp;</p>
+                    <a href="#block-id" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/suhasini.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Suhasini Vishwanathan</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Suhasini Vishwanathan</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Head of Department</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Suhasini Viswanathan is a qualified Dietician and a Certified Diabetes Educator. She has completed her Masters in Dietetics from the University of Pune and has also completed her PG Certificate in Diabetes Education recognized by the International Diabetes Federation. Her interest in field of nutrition lies in both Medical / Clinical cases as well as Sports Nutrition. Suhasini has also completed a certification as a PEDIATRIC NUTRITIONIST and specialises in Child and Kids Nutrition. She works on special nutrition cases for Autistic, Challenged, Cancer and other medical cases with regards to Children. Currently she is working in Qua Nutrition as the Head of Quality Control in Dietetic Management at QUA NUTRITION CLINICS.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Suhasini Viswanathan is a qualified Dietician and a Certified Diabetes Educator. She has completed her Masters in Dietetics from the University of Pune and has also completed her PG Certificate in Diabetes Education recognized</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id1"> by the International Diabetes Federation. Her interest in field of nutrition lies in both Medical / Clinical cases as well as Sports Nutrition. Suhasini has also completed a certification as a PEDIATRIC NUTRITIONIST and specialises in Child and Kids Nutrition. She works on special nutrition cases for Autistic, Challenged, Cancer and other medical cases with regards to Children. Currently she is working in Qua Nutrition as the Head of Quality Control in Dietetic Management at QUA NUTRITION CLINICS.<br>&nbsp;</p>
+                    <a href="#block-id1" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id1"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/acshah.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Achsah Rathan K.</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Achsah Rathan K.</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Head of Quality Control</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Achsah Rathan Kumar is accredited by Sport Dietitians Australia as a Sports dietitian. She is a Food Service Management postgraduate. She had been in this field for 7-8 years now. Through these years, she has worked with a range of state- and national-level players involved in swimming, fencing, body building, squash, tennis, etc. She has also helped IPL players, players from Orissa Cricket Academy, a few local celebrities and those in recreational sports like marathon and cycling achieve their goals. Some of the budding national- and international-level players are among her clients. She does seminars for co-operates, coaches, sports academies and colleges. She goes an extra mile by encouraging and supporting her clients to see that they get the best outcome. She believes " Every Choice has its own outcome, so choose wisely" Currently working at Qua as a Sports Dietitian and Head of the Department. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Achsah Rathan Kumar is accredited by Sport Dietitians Australia as a Sports dietitian. She is a Food Service Management postgraduate. She had been in this field for 7-8 years now. Through these years, she has worked with</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id2"> a range of state- and national-level players involved in swimming, fencing, body building, squash, tennis, etc. She has also helped IPL players, players from Orissa Cricket Academy, a few local celebrities and those in recreational sports like marathon and cycling achieve their goals. Some of the budding national- and international-level players are among her clients. She does seminars for co-operates, coaches, sports academies and colleges. She goes an extra mile by encouraging and supporting her clients to see that they get the best outcome. She believes " Every Choice has its own outcome, so choose wisely" Currently working at Qua as a Sports Dietitian and Head of the Department. <br>&nbsp;</p>
+                    <a href="#block-id2" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id2"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/ruhaaa.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Ruha Karambelkar</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Ruha Karambelkar</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Head of Training Department</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Ruha is a qualified Clinical Nutritionist and Certified Diabetes Educator, with PG Certificate in Diabetes Education recognized by International Diabetes Federation. Her interests also lie in Sports Nutrition. She has interned in P.D Hinduja Hospital, Mumbai. Her forte lies in Medical Nutrition Therapy for Cardiovascular Diseases, Co morbidities and Diabetes. Originally from Pune, she has worked with leading Interventional Cardiologists and Diabetologists as a Nutritionist for Cardiovascular Rehabilitation (CVR) in Maharashtra. She has handled projects with HACCP (Hazard Analysis and Critical Control Program) a government initiative concerning ‘Maintenance of Health and Hygiene of foods in Messes, Eat-outs and Catering Services’. Currently she is working in Qua Nutrition as the Head of Training Department at QUA NUTRITION CLINICS. She swears by the fact stated in Shrimad Bhagavad Geeta “If your Diet is wrong, Medicine is of no use. If your Diet is correct, Medicine is of no need.”</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Ruha is a qualified Clinical Nutritionist and Certified Diabetes Educator, with PG Certificate in Diabetes Education recognized by International Diabetes Federation. Her interests also lie in Sports Nutrition. She has interned in P.D</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id3"> Hinduja Hospital, Mumbai. Her forte lies in Medical Nutrition Therapy for Cardiovascular Diseases, Co morbidities and Diabetes. Originally from Pune, she has worked with leading Interventional Cardiologists and Diabetologists as a Nutritionist for Cardiovascular Rehabilitation (CVR) in Maharashtra. She has handled projects with HACCP (Hazard Analysis and Critical Control Program) a government initiative concerning ‘Maintenance of Health and Hygiene of foods in Messes, Eat-outs and Catering Services’. Currently she is working in Qua Nutrition as the Head of Training Department at QUA NUTRITION CLINICS. She swears by the fact stated in Shrimad Bhagavad Geeta “If your Diet is wrong, Medicine is of no use. If your Diet is correct, Medicine is of no need.”<br>&nbsp;</p>
+                    <a href="#block-id3" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id3"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/lygia.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Lygia Correia</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Lygia Correia</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">"The doctor of the future will no longer treat the human frame with drugs but rather will cure and prevent diseases with NUTRITION" Lygia Correia, Bangalore Based Dietitian holds a Bachelor's Degree from Mount Carmel College, Bangalore and Master's Degree from Women's Christian College College, Chennai. She has previously worked at St Johns Research Institute, Bangalore for a research project on The International study on Childhood Obesity, Lifestyle and the Environment (ISCOLE) and interned at the Christian Medical College, Vellore. She has an aptitude for diet planning with an expertise in Weight Management and Nutrition for Medical Care. Currently, she is working with QUA Nutrition and handles the Bangalore Clinics. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">"The doctor of the future will no longer treat the human frame with drugs but rather will cure and prevent diseases with NUTRITION" Lygia Correia, Bangalore Based Dietitian holds a Bachelor's Degree from Mount Carmel College,</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id4"> Bangalore and Master's Degree from Women's Christian College College, Chennai. She has previously worked at St Johns Research Institute, Bangalore for a research project on The International study on Childhood Obesity, Lifestyle and the Environment (ISCOLE) and interned at the Christian Medical College, Vellore. She has an aptitude for diet planning with an expertise in Weight Management and Nutrition for Medical Care. Currently, she is working with QUA Nutrition and handles the Bangalore Clinics. <br>&nbsp;</p>
+                    <a href="#block-id4" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id4"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/vartika.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Vartika Singhal</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Vartika Singhal</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Vartika Singhal is a well renowned Clinical Nutritionist and Diabetes Educator. She has a wide clinical experience of more than 5 years in the area of Endocrinology, Cardiac Sciences, Diabetes, Paediatrics and Sports Nutrition. She has done her masters in Dietetics and Clinical Nutrition. She is a Certified Diabetes Educator, holds a professional Certificate on Nutrition, Packaging and Food Safety, Certified Insulin Pump Trainer and a Diploma holder in Clinical Research. Her expertise is to handle a range of Corporate Brands and comes with the front end experience to handle various profile of a Nutritionist. Previously worked with Apollo Hospital, Max Hospital and served as Chief Dietitian- Delhi for ApolloLife, has been associated with Dr Deepak Chopra's wellness initiative in India -JIYO In the past she has served as a Nutrition Coach to leading corporates like BCG (Boston Consulting Group), Amway, Olam Agro, Godfrey- Phillips. She served as a teaching faculty for senior doctors (Diabetologists and Endocrinologists) imparting Diabetes Education at Medvarsity (Apollo Group) and has done several nutrition webinars with CII (Confederation of Indian Industries) for their associated corporates. Handled various Nutrition educative sessions in leading schools of Delhi-NCR, MNC's like Samsung, Jindal Steel, HCL, Airtel, Asian Development Bank and PSU's like Indian oil Corporation, SAIL, NHPC etc.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Vartika Singhal is a well renowned Clinical Nutritionist and Diabetes Educator. She has a wide clinical experience of more than 5 years in the area of Endocrinology, Cardiac Sciences, Diabetes, Paediatrics and</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id5"> Sports Nutrition. She has done her masters in Dietetics and Clinical Nutrition. She is a Certified Diabetes Educator, holds a professional Certificate on Nutrition, Packaging and Food Safety, Certified Insulin Pump Trainer and a Diploma holder in Clinical Research. Her expertise is to handle a range of Corporate Brands and comes with the front end experience to handle various profile of a Nutritionist. Previously worked with Apollo Hospital, Max Hospital and served as Chief Dietitian- Delhi for ApolloLife, has been associated with Dr Deepak Chopra's wellness initiative in India -JIYO In the past she has served as a Nutrition Coach to leading corporates like BCG (Boston Consulting Group), Amway, Olam Agro, Godfrey- Phillips. She served as a teaching faculty for senior doctors (Diabetologists and Endocrinologists) imparting Diabetes Education at Medvarsity (Apollo Group) and has done several nutrition webinars with CII (Confederation of Indian Industries) for their associated corporates. Handled various Nutrition educative sessions in leading schools of Delhi-NCR, MNC's like Samsung, Jindal Steel, HCL, Airtel, Asian Development Bank and PSU's like Indian oil Corporation, SAIL, NHPC etc.<br>&nbsp;</p>
+                    <a href="#block-id5" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id5"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/shiny.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Shiny Esther</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shiny Esther</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Shiny Esther is a qualified and experienced Holistic Dietitian who has completed her MPHIL and Masters Degree in Foods and Nutrition from Women's Christian College, Chennai. Her under graduation was in Food Service Management and Dietetics. She has a summer internship from Madras Medical Mission (MMM) in the field of Clinical Nutrition. She is passionate about nutrition and has conducted several seminars in schools, colleges and various sports academies in Chennai and has been actively involved in creating awareness about nutrition by conducting Nutrition Education Programs in different communities across the city. She has also spread awareness about Healthy Eating in Big FM, Chennai Live FM and also in a News Channel about Gluten Intolerance. Her interest in the field of Nutrition lies in Weight Management and Sports Nutrition. She believes in the saying “Nutrition is not Low Fat. It's not Low Calorie. It's not being hungry and feeling deprived. It's nourishing your body with real, whole foods so that you are consistently satisfied and energized to live life to the fullest."</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Shiny Esther is a qualified and experienced Holistic Dietitian who has completed her MPHIL and Masters Degree in Foods and Nutrition from Women's Christian College, Chennai. Her under graduation was in Food </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id6">Service Management and Dietetics. She has a summer internship from Madras Medical Mission (MMM) in the field of Clinical Nutrition. She is passionate about nutrition and has conducted several seminars in schools, colleges and various sports academies in Chennai and has been actively involved in creating awareness about nutrition by conducting Nutrition Education Programs in different communities across the city. She has also spread awareness about Healthy Eating in Big FM, Chennai Live FM and also in a News Channel about Gluten Intolerance. Her interest in the field of Nutrition lies in Weight Management and Sports Nutrition. She believes in the saying “Nutrition is not Low Fat. It's not Low Calorie. It's not being hungry and feeling deprived. It's nourishing your body with real, whole foods so that you are consistently satisfied and energized to live life to the fullest."<br>&nbsp;</p>
+                    <a href="#block-id6" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id6"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/shreya.jpg" alt="">
-                  <h5 class="text-gray mt-5 mb-5 text-center">Shreya Adhav</h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shreya Adhav</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Shreya Adhav is a Qualified Sports Nutritionist. She has completed her Bachelors in Nutrition and Dietetics from SNDT University (Mumbai) and Masters in Sports Nutrition from College of Home Science, Nirmala Niketan (Mumbai). Her keen interest lies in Sports Nutrition but she does handle cases of Clinical, Kids, and Geriatric, Medical Care Nutrition. She was also a part of medical team as a Sports Nutritionist with Asian Heart Institute during the Mumbai Marathon (2013), Goa Marathon and Goa Triathlon (2016). Also has an experience in the Phase II and III Cardiac Rehabilitation Program at the Preventive Cardiology Department, Asian Heart Institute City Centre, Mumbai. She has hosted a number of Nutrition Seminars for Sports Coaches, Kids, Athletes, General Population and for Corporates. A lifetime Member of Indian Dietetic Association (Mumbai Chapter) and Nasik Nutrition Forum She loves to write on kids, clinical, genetic and sports nutrition and has published few articles in newspaper and in online magazines She is a part of E-clinic at Qua Nutrition and currently working as a Dietitian (Sports Specialist). Her Motto is to create awareness among people that they “Must Eat To Live And Not Live To Eat”.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Shreya Adhav is a Qualified Sports Nutritionist. She has completed her Bachelors in Nutrition and Dietetics from SNDT University (Mumbai) and Masters in Sports Nutrition from College of Home Science, </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id7">Nirmala Niketan (Mumbai). Her keen interest lies in Sports Nutrition but she does handle cases of Clinical, Kids, and Geriatric, Medical Care Nutrition. She was also a part of medical team as a Sports Nutritionist with Asian Heart Institute during the Mumbai Marathon (2013), Goa Marathon and Goa Triathlon (2016). Also has an experience in the Phase II and III Cardiac Rehabilitation Program at the Preventive Cardiology Department, Asian Heart Institute City Centre, Mumbai. She has hosted a number of Nutrition Seminars for Sports Coaches, Kids, Athletes, General Population and for Corporates. A lifetime Member of Indian Dietetic Association (Mumbai Chapter) and Nasik Nutrition Forum She loves to write on kids, clinical, genetic and sports nutrition and has published few articles in newspaper and in online magazines She is a part of E-clinic at Qua Nutrition and currently working as a Dietitian (Sports Specialist). Her Motto is to create awareness among people that they “Must Eat To Live And Not Live To Eat”.<br>&nbsp;</p>
+                    <a href="#block-id7" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id7"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Namrata.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Namrata Gulati</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Namrata Gulati</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">With a good base in Food Science & Nutrition from S.V.T College of Home Science (SNDT, Mumbai) at graduation level, Namrata aced to choose Sports Nutrition for her Master’s specialization at the University of Mumbai. She is also Certified Nutrigenomic Counselor & excels in the concept of planning a diet based on Genetic Testing. Working on diabetes as well as fitness related nutrition cases are also her key interests where she believes in helping clients maximize their holistic potential. Namrata is a marathon runner herself and previously having worked at Asian Heart Institute – Preventive Cardiology Department she has assisted cardiac patients train for many marathons too. She believes that “Performance Nutrition is to an Athlete like a Key is to a Lock- It must be tailor-made!" Currently, working with QUA Nutrition, Namrata heads the Mumbai Clinic. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">With a good base in Food Science & Nutrition from S.V.T College of Home Science (SNDT, Mumbai) at graduation level, Namrata aced to choose Sports Nutrition for her Master’s specialization at the University of Mumbai.</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id8"> She is also Certified Nutrigenomic Counselor & excels in the concept of planning a diet based on Genetic Testing. Working on diabetes as well as fitness related nutrition cases are also her key interests where she believes in helping clients maximize their holistic potential. Namrata is a marathon runner herself and previously having worked at Asian Heart Institute – Preventive Cardiology Department she has assisted cardiac patients train for many marathons too. She believes that “Performance Nutrition is to an Athlete like a Key is to a Lock- It must be tailor-made!" Currently, working with QUA Nutrition, Namrata heads the Mumbai Clinic.<br>&nbsp;</p>
+                    <a href="#block-id8" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id8"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/rhoda.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Rhoda Bincy</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Rhoda Bincy</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Rhoda Bincy M. K. is a nutritionist and who has completed her Masters in Food and nutrition from Bangalore University and Bachelors in Nutrition and Dietetics from Mount Carmel College, Bangalore. She has done her dissertation in 'comparison of food choices between working women and homemakers' and would love to continue helping her clients make healthier choices towards a disease free future. She has been working extensively with swimmers and sportsmen in her tenure with QUA. She is a qualified assistant professor and loves imparting knowledge during her counseling’s. She is also a recreational triathlete. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Rhoda Bincy M. K. is a nutritionist and who has completed her Masters in Food and nutrition from Bangalore University and Bachelors in Nutrition and Dietetics from Mount Carmel College, Bangalore. She has done her</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id9"> dissertation in 'comparison of food choices between working women and homemakers' and would love to continue helping her clients make healthier choices towards a disease free future. She has been working extensively with swimmers and sportsmen in her tenure with QUA. She is a qualified assistant professor and loves imparting knowledge during her counseling’s. She is also a recreational triathlete.<br>&nbsp;</p>
+                    <a href="#block-id9" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id9"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/susan.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Susan Bijoy Jacob</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Susan Bijoy Jacob</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Susan BijoyJacob , is a Nutritionist holding her Master’s degree in Foods and Nutrition from Women’s Christian College, Chennai. She did her graduation in Foods Service Management, Nutrition and Dietetics. She did her Master’s thesis on “The comparative effect of folic acid and cod liver oil supplementation in subjects with depressive disorder " in a popular Psychiatric and Rehabilitationcenter in Kolkata. Her interest lies in holistic and therapeutic nutrition. She has been handling various sports and medical cases such as depression, diabetes, hypothyroidism etc. Her motto is “Always learn to master your fitness, nutrition and emotions instead of them mastering you.”</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Susan BijoyJacob , is a Nutritionist holding her Master’s degree in Foods and Nutrition from Women’s Christian College, Chennai. She did her graduation in Foods Service Management, Nutrition and Dietetics. She did her</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id10">  Master’s thesis on “The comparative effect of folic acid and cod liver oil supplementation in subjects with depressive disorder " in a popular Psychiatric and Rehabilitationcenter in Kolkata. Her interest lies in holistic and therapeutic nutrition. She has been handling various sports and medical cases such as depression, diabetes, hypothyroidism etc. Her motto is “Always learn to master your fitness, nutrition and emotions instead of them mastering you.”<br>&nbsp;</p>
+                    <a href="#block-id10" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id10"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/abigail.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Abigail Ajgarni</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Abigail Ajgarni</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Abigail Ajgarni has completed graduation in Applied Nutrition, from SVT college of Home Science, SNDT university.She also holds a Masters in Sports Nutrition from Nirmala Niketan Mumbai University. She has done her dissertation on "To Assess dietary habits, fitness levels and incidence of injuries in amateur female cricketers aged 18-24 years" and also presented a poster on the same at International conference on Community Nutrition & Health: A Social Responsibility & Humanizing Work and Work Environment 2015. Her interests lies in working with athletes and also loves writing and travelling different places. She has handled athletes from various sports like swimming, cricket, tennis, cycling, wrestling and many more.She also has experience handling International and Olympic level players. She also has experience of handling kids to teenagers to adults to old people helping them achieve their goals. She believes in the saying by Steve Jobs~ "The only way to do great work is to love what you do"</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Abigail Ajgarni has completed graduation in Applied Nutrition, from SVT college of Home Science, SNDT university.She also holds a Masters in Sports Nutrition from Nirmala Niketan Mumbai University. She has done her </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id11">dissertation on "To Assess dietary habits, fitness levels and incidence of injuries in amateur female cricketers aged 18-24 years" and also presented a poster on the same at International conference on Community Nutrition & Health: A Social Responsibility & Humanizing Work and Work Environment 2015. Her interests lies in working with athletes and also loves writing and travelling different places. She has handled athletes from various sports like swimming, cricket, tennis, cycling, wrestling and many more.She also has experience handling International and Olympic level players. She also has experience of handling kids to teenagers to adults to old people helping them achieve their goals. She believes in the saying by Steve Jobs~ "The only way to do great work is to love what you do"<br>&nbsp;</p>
+                    <a href="#block-id11" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id11"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Shila.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Shila Rai</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shila Rai</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Shila Rai, is a qualified Dietitian and holds a Degree in Clinical Nutrition & Dietetics from University of Calcutta and aMasters Degree in Applied Nutrition from All India Institute of Hygiene and Public Health. She has also interned at B.M.Birla Heart Research Centre in Kolkata. Her interests lies in the field of therapeutic and sports nutrition. She believes in the saying that "Every time you eat is an opportunity to nourish your body". Currently she is working in Qua Nutrition & operating Kolkata Branch.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Shila Rai, is a qualified Dietitian and holds a Degree in Clinical Nutrition & Dietetics from University of Calcutta and aMasters Degree in Applied Nutrition from All India Institute of Hygiene and Public Health. She has also interned</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id12"> at B.M.Birla Heart Research Centre in Kolkata. Her interests lies in the field of therapeutic and sports nutrition. She believes in the saying that "Every time you eat is an opportunity to nourish your body". Currently she is working in Qua Nutrition & operating Kolkata Branch.<br>&nbsp;</p>
+                    <a href="#block-id12" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id12"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/dhanashree.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Dhanashree Rabha</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Dhanashree Rabha</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Dhanashree Rabha holds a Post Graduate degree in Food Service Management and Dietetics from Women's Christian College, Chennai. She has completed her internship at Christian Medical College Hospital (CMC), Vellore and also has an experience in the fitness industry. Her interest lies in Therapeutic and sports performance nutrition and she has also worked with some of the young achievers in the sports field here at Qua Nutrition. She emphasizes on making small daily improvements which can be a key to staggering long term result .She believes in the saying that ‘’The food you eat can either be the safest or most powerful form of medicine or the slowest form of poison.’’ – Ann Wigmore </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Dhanashree Rabha holds a Post Graduate degree in Food Service Management and Dietetics from Women's Christian College, Chennai. She has completed her internship at Christian Medical College Hospital (CMC), Vellore</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id13">  and also has anexperience in the fitness industry. Her interest lies in Therapeutic and sports performance nutrition and she has also worked with some of the young achievers in the sports field here at Qua Nutrition. She emphasizes on making small daily improvements which can be a key to staggering long term result .She believes in the saying that ‘’The food you eat can either be the safest or most powerful form of medicine or the slowest form of poison.’’ – Ann Wigmore <br>&nbsp;</p>
+                    <a href="#block-id13" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id13"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Elankana.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Elakkana RP</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Elakkana RP</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Elakkana is a Dietitian holding her Masters Degree in Foods and Nutrition from Women’s Christian College, Chennai. She did her graduation in Nutrition, Dietetics, and Foods Service Management in Anna Adarsh College for Women, and also cleared NET (National Eligibility Test) exam. She has conducted seminars in various Colleges, Sports academies in Chennai and has actively involved in creating awareness about nutrition by conducting Nutrition Education Program in different communities in Chennai. She has also done her internship from MMM (Madras Medical Mission) Chennai. Her interest lies in treating Lifestyle Disorders as well as Sports Nutrition. She believes in the sayings “Leave your drugs in the chemist’s pot if you can heal the patient with food”. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Elakkana is a Dietitian holding her Masters Degree in Foods and Nutrition from Women’s Christian College, Chennai. She did her graduation in Nutrition, Dietetics, and Foods Service Management in Anna Adarsh College</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id14"> for Women, and also cleared NET (National Eligibility Test) exam. She has conducted seminars in various Colleges, Sports academies in Chennai and has actively involved in creating awareness about nutrition by conducting Nutrition Education Program in different communities in Chennai. She has also done her internship from MMM (Madras Medical Mission) Chennai. Her interest lies in treating Lifestyle Disorders as well as Sports Nutrition. She believes in the sayings “Leave your drugs in the chemist’s pot if you can heal the patient with food”.<br>&nbsp;</p>
+                    <a href="#block-id14" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id14"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/pallabi.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Pallabi Sinha</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Pallabi Sinha</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Pallabi Sinha a Post graduate in Clinical Dietetics from down town College of Allied Health Sciences, Guwahati. She has worked as a Dietitian at Pratiksha Hospitals and Hayat Hospital. Her interests lie in Holistic and Clinical Nutrition and wants to explore her capabilities beyond. Her aim is to create a healthier future. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Pallabi Sinha a Post graduate in Clinical Dietetics from down town College of Allied Health Sciences, Guwahati. She has worked as a Dietitian at Pratiksha Hospitals and Hayat Hospital. Her interests lie in Holistic and</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id15"> Clinical Nutrition and wants to explore her capabilities beyond. Her aim is to create a healthier future.<br>&nbsp;</p>
+                    <a href="#block-id15" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id15"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/debalina.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Debalina Ghosh</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Debalina Ghosh</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Debalina Ghosh is a qualified Dietitian and a Certified Diabetes Educator with PG Certificate in Diabetes Education recognized by International Diabetes Federation. She has pursued her Masters in Food and Nutrition from J. D Birla Institute, affiliated to Jadavpur University, Kolkata. She has worked at Yashoda Hospitals, Hyderabad for 8 Months and Apollo Life Studios, Hyderabad for 1.5 years, where she gained experience in various medical fields, Cardiac rehabilitation as well as fitness and sports nutrition. Her interest lies in medical and clinical fields and Sports nutrition. She believes 'Health is not a destination, It is a way of life’</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Debalina Ghosh is a qualified Dietitian and a Certified Diabetes Educator with PG Certificate in Diabetes Education recognized by International Diabetes Federation. She has pursued her Masters in Food and Nutrition from </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id16">J. D Birla Institute,affiliated to Jadavpur University, Kolkata. She has worked at Yashoda Hospitals, Hyderabad for 8 Months and Apollo Life Studios, Hyderabad for 1.5 years, where she gained experience in various medical fields, Cardiac rehabilitation as well as fitness and sports nutrition. Her interest lies in medical and clinical fields and Sports nutrition. She believes 'Health is not a destination, It is a way of life’<br>&nbsp;</p>
+                    <a href="#block-id16" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id16"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Lakshmi.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Lakshmi Darshini</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Lakshmi Darshini</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Lakshmi Darshini has completed her Masters in Foods & Nutrition from Women's Christian College, Chennai and Bachelors in Food Science & Management from M.O.P. Vaishnav College for Women, Chennai. She believes in the philosophy 'Let food be thy medicine and medicine be thy food'. Her thirst for knowledge is helping her discover the depths of nutrition and the wonders it can create. Her interests range from Holistic nutrition to Weight Management and Medical/Clinical Cases. She has also done her internship from Madras Medical Mission, Chennai. She has done several Nutrition Education Programs to a wide range of population including tribal groups and school children during her Masters. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Lakshmi Darshini has completed her Masters in Foods & Nutrition from Women's Christian College, Chennai and Bachelors in Food Science & Management from M.O.P. Vaishnav College for Women, Chennai. She believes </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id17">in the philosophy 'Let food be thy medicine and medicine be thy food'. Her thirst for knowledge is helping her discover the depths of nutrition and the wonders it can create. Her interests range from Holistic nutrition to Weight Management and Medical/Clinical Cases. She has also done her internship from Madras Medical Mission, Chennai. She has done several Nutrition Education Programs to a wide range of population including tribal groups and school children during her Masters.<br>&nbsp;</p>
+                    <a href="#block-id17" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id17"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Ashlin.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Ashlin</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Ashlin</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Ashlin has cleared her NET Exam (National Eligibility Test for Lecturership), completed her Masters in Child development and Essentials of Nutrition from JBAS college, and Bachelors in Food Service Management and Dietetics from WCC, Chennai. Her interest in the field of nutrition lies in Holistic, Weight Management, Clinical / Medical Cases, Fertility and Sports Nutrition. She also works on special nutrition cases for Autistic kids. She has done her Internship in Fortis Malar Hospital and KalyaniMultispeciality Hospital. She has conducted various Nutrition programs in Schools and Hospitals. Currently Working as a Dietitian at Qua Nutrition Clinic. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Ashlin has cleared her NET Exam (National Eligibility Test for Lecturership), completed her Masters in Child development and Essentials of Nutrition from JBAS college, and Bachelors in Food Service Management</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id18"> and Dietetics from WCC, Chennai. Her interest in the field of nutrition lies in Holistic, Weight Management, Clinical / Medical Cases, Fertility and Sports Nutrition. She also works on special nutrition cases for Autistic kids. She has done her Internship in Fortis Malar Hospital and KalyaniMultispeciality Hospital. She has conducted various Nutrition programs in Schools and Hospitals. Currently Working as a Dietitian at Qua Nutrition Clinic.<br>&nbsp;</p>
+                    <a href="#block-id18" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id18"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/sahiba.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Sahiba Juneja</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Sahiba Juneja</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Sahiba Juneja is a Post Graduate in Sports Nutrition from Nirmala Niketan College of Home Science Mumbai. She is a Yoga Enthusiast and has completed a Research Project on Influence of Physical Fitness in Yoga Practitioners. She has also done a literature survey on Benefits of Ghee in various Population under Ryan Fernando during her summer internship at Qua Nutrition. Being a Yoga Enthusiast herself she firmly believes in the motto “Stay Fit and Spread It.” </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Sahiba Juneja is a Post Graduate in Sports Nutrition from Nirmala Niketan College of Home Science Mumbai. She is a Yoga Enthusiast and has completed a Research Project on Influence of Physical Fitness in Yoga Practitioners.</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id19"> She has also done a literature survey on Benefits of Ghee in various Population under Ryan Fernando during her summer internship at Qua Nutrition. Being a Yoga Enthusiast herself she firmly believes in the motto “Stay Fit and Spread It.”<br>&nbsp;</p>
+                    <a href="#block-id19" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id19"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/tenzin.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Tenzin Kelsang</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Tenzin Kelsang</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Tenzin Kelsang who completed her post graduated in Food and Nutrition from JSS medical University of Mysore. She is from Tibet and her endeavor is to change people’s life via her nutrition education. Her motto is“'Let food be thy medicine and medicine be thy food' and believes in implementing it. She done with four months internship in Apollo Hospital in Bangalore. Hardworking, hunger to learn and patience is her hobby. And her interest is to learn more about sports, medical and kid’s case. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Tenzin Kelsang who completed her post graduated in Food and Nutrition from JSS medical University of Mysore. She is from Tibet and her endeavor is to change people’s life via her nutrition education. Her motto is“'Let food </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id20">be thy medicine and medicine be thy food' and believes in implementing it. She done with four months internship in Apollo Hospital in Bangalore. Hardworking, hunger to learn and patience is her hobby. And her interest is to learn more about sports, medical and kid’s case. <br>&nbsp;</p>
+                    <a href="#block-id20" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id20"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Vaishali.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Vaishali Ratnam</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Vaishali Ratnam</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Vaishali Ratnam is a certified dietitian and a holistic health coach with a masters degree in nutrition and 7 years of experience in the field of fat loss and lifestyle diseases. She possesses strong motivational and knowledge empowering skills which are the corner stones of achieving any long term goal. Her philosophy is, “Start where you are, use what you can, do what you can, because it’s the Start that Stops most people.' BE the Change, you always want to see in YOU.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Vaishali Ratnam is a certified dietitian and a holistic health coach with a masters degree in nutrition and 7 years of experience in the field of fat loss and lifestyle diseases. She possesses strong motivational and knowledge</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id21"> empowering skills which are the corner stones of achieving any long term goal. Her philosophy is, “Start where you are, use what you can, do what you can, because it’s the Start that Stops most people.' BE the Change, you always want to see in YOU. <br>&nbsp;</p>
+                    <a href="#block-id21" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id21"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Tafflyne.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Taffylene Dkhar</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Taffylene Dkhar</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Taffylene Dkhar graduated from Women’s Christian College,Chennai with a Master Degree in Food Service Management and Dietetics and completed her Dietetics internship in Madras Medical Mission Hospital,Chennai. I aim to deliver practical and realistic guidance to my clients and I felt strongly about living a healthy lifestyle. My interest is to impart knowledge of nutrition and to impact the client’s lives by promoting wellness and teaching them that health is deeply related to diet. My mission in Life is to use innovative nutrition knowledge and extensive experience to help people achieve permanent wellness. I welcome and enjoy working with all stages of each person’s journey and I also have a passion for sports nutrition. My motto is “Eating healthy is transformation from cell to soul.” </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Taffylene Dkhar graduated from Women’s Christian College,Chennai with a Master Degree in Food Service Management and Dietetics and completed her Dietetics internship in Madras Medical Mission Hospital,Chennai.</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id22"> I aim to deliver practical and realistic guidance to my clients and I felt strongly about living a healthy lifestyle. My interest is to impart knowledge of nutrition and to impact the client’s lives by promoting wellness and teaching them that health is deeply related to diet. My mission in Life is to use innovative nutrition knowledge and extensive experience to help people achieve permanent wellness. I welcome and enjoy working with all stages of each person’s journey and I also have a passion for sports nutrition. My motto is “Eating healthy is transformation from cell to soul.” <br>&nbsp;</p>
+                    <a href="#block-id22" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id22"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/antara.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Antara Das Gupta</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Antara Das Gupta</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Antara Dasgupta is a qualified Nutritionist. She has completed her Masters in Food and Nutrition from University of Calcutta. Her interest in field of nutrition lies on Holistic Nutrition. She has done one month internship from Fortis Hospital, Kolkata. Where she handled different clinical cases. She has worked as a nutritionist in a weight loss center for 2 years. She has handled clients with different obesity related complications like PCO, Infertility, hypothyroid, diabetes, cardio logical problems. She has also dealt with client who had undergone liposuction. Currently she is a Nutritionist at Qua Nutrition. She believes “Don’t start a DIET that has an expiration date, focus on a LIFESTYLE CHANGE that will last FOREVER. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Antara Dasgupta is a qualified Nutritionist. She has completed her Masters in Food and Nutrition from University of Calcutta. Her interest in field of nutrition lies on Holistic Nutrition. She has done one month internship from Fortis</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id23"> Hospital, Kolkata. Where she handled different clinical cases. She has worked as a nutritionist in a weight loss center for 2 years. She has handled clients with different obesity related complications like PCO, Infertility, hypothyroid, diabetes, cardio logical problems. She has also dealt with client who had undergone liposuction. Currently she is a Nutritionist at Qua Nutrition. She believes “Don’t start a DIET that has an expiration date, focus on a LIFESTYLE CHANGE that will last FOREVER. <br>&nbsp;</p>
+                    <a href="#block-id23" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id23"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Shabnam.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Shabnam Shama</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shabnam Shama</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">"One bad meal won't make you unhealthy, just like one good meal won't make you fit. Consistency is the key." Shabnam Shama, a Qualified Clinical Dietitian with specialisation in Diabetes and Cardiac Nutrition and a Certified Diabetes Educator, believes in making a long-term lifestyle change and not a short-term diet. After completing her Graduation and Post Graduation Diploma from SNDT University (Mumbai), she interned at L.S. Raheja Hospital and B.Y.L. Nair Ch. Hospital, and so her forte lies in Medical Nutrition Therapy. Her interest also lies in Sports Nutrition and she is a Certified Pre and Post Pregnancy Trainer. Currently, doing what she does best, Shabnam Shama is a Dietitian at Qua Nutrition Clinic in Mumbai.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">"One bad meal won't make you unhealthy, just like one good meal won't make you fit. Consistency is the key." Shabnam Shama, a Qualified Clinical Dietitian with specialisation in Diabetes and Cardiac Nutrition and a </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id24">Certified Diabetes Educator, believes in making a long-term lifestyle change and not a short-term diet. After completing her Graduation and Post Graduation Diploma from SNDT University (Mumbai), she interned at L.S. Raheja Hospital and B.Y.L. Nair Ch. Hospital, and so her forte lies in Medical Nutrition Therapy. Her interest also lies in Sports Nutrition and she is a Certified Pre and Post Pregnancy Trainer. Currently, doing what she does best, Shabnam Shama is a Dietitian at Qua Nutrition Clinic in Mumbai.<br>&nbsp;</p>
+                    <a href="#block-id24" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id24"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/solo.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Shonthar M Solo</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shonthar M Solo</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Shonthar M solo, is a Clinical Nutritionist. She has completed her Master's Degree in Clinical Nutrition and Dietetics from Coimbatore and her Bachelors in Clinical Nutrition and Dietetics from Shillong. She had done her Registered Dietician internship in Fortis Hospital Bangalore. She has worked in Obesity and Lifestyle Management Clinic for one year as a Nutritionist. Her interest lies in Clinical and Sports Nutrition. “A healthy outside starts from the inside" </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Shonthar M solo, is a Clinical Nutritionist. She has completed her Master's Degree in Clinical Nutrition and Dietetics from Coimbatore and her Bachelors in Clinical Nutrition and Dietetics from Shillong. She had done her Registered</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id25"> Dietician internship in Fortis Hospital Bangalore. She has worked in Obesity and Lifestyle Management Clinic for one year as a Nutritionist. Her interest lies in Clinical and Sports Nutrition. “A healthy outside starts from the inside"<br>&nbsp;</p>
+                    <a href="#block-id25" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id25"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Rituparna.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Rituparna Dutta</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Rituparna Dutta</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Rituparna Dutta is a qualified nutritionist. She has completed her masters in Food and Nutrition from Vidyasagar University and she did her bachelors from West BengalState University. She has done her training from Peerless Hospital in Kolkata andhas four years of experience in the field of nutrition as an executive dietitian,where she has handled many complicated clinical cases, pre and post-surgical patients etc. She holds her interest in clinical and sports nutrition. Currently, she is a nutritionist at QUA Nutrition. She believes that 'optimum nutrition is the magic pill for tomorrow. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Rituparna Dutta is a qualified nutritionist. She has completed her masters in Food and Nutrition from Vidyasagar University and she did her bachelors from West BengalState University. She has done her training from Peerless</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id26"> Hospital in Kolkata andhas four years of experience in the field of nutrition as an executive dietitian,where she has handled many complicated clinical cases, pre and post-surgical patients etc. She holds her interest in clinical and sports nutrition. Currently, she is a nutritionist at QUA Nutrition. She believes that 'optimum nutrition is the magic pill for tomorrow. <br>&nbsp;</p>
+                    <a href="#block-id26" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id26"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/ekkta.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Ekkta Kundu</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Ekkta Kundu</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Ekkta Kundu is a Qualified nutritionist holding her BSc degree in Food Science and nutrition from West Bengal State University and MSc degree from Pondicherry Central University. She has interned in a reputed hospital of Kolkata, AMRI in Clinical Nutrition and Dietetics. She did her MSc dissertation in "Microencapsulation of Limonene oil by exudate gums using Freeze drying method". Her interest lies in the management of lifestyle diseases and related health issues. She feels having a good nutrition also helps to have a sound soul, health, and mind. As a Quatician, it is her sole responsibility to listen, understand and empathize with person's lifestyle and provide solutions to it. We need motivation for everything in life to stay focused. She believes in "A Healthy Outside starts from the Inside". </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Ekkta Kundu is a Qualified nutritionist holding her BSc degree in Food Science and nutrition from West Bengal State University and MSc degree from Pondicherry Central University. She has interned in a reputed hospital</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id27"> of Kolkata, AMRI in Clinical Nutrition and Dietetics. She did her MSc dissertation in "Microencapsulation of Limonene oil by exudate gums using Freeze drying method". Her interest lies in the management of lifestyle diseases and related health issues. She feels having a good nutrition also helps to have a sound soul, health, and mind. As a Quatician, it is her sole responsibility to listen, understand and empathize with person's lifestyle and provide solutions to it. We need motivation for everything in life to stay focused. She believes in "A Healthy Outside starts from the Inside". <br>&nbsp;</p>
+                    <a href="#block-id27" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id27"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/Jeyashree.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Jeyashree B</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Jeyashree B</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Jeyashree B is a qualified Clinical Dietitian and Sports Nutritionist. She holds a Post graduation in "Sports Science, Fitness, and Nutrition" from Dr. BMN College for Arts and Science and was awarded for being the topper of her batch. She has completed the Registered Dietitian Internship at Apollo Hospitals, Chennai, along with her Master's in "Clinical Nutrition and Dietetics" from PSG College of Arts and Science, Coimbatore. She is also NET Qualified for Assistant Professor and was teaching the Budding Nutritionists at "Ethiraj College for Women", Chennai. Her interests lie in the field of Sports Nutrition, she has worked with the Tamil Nadu Women's Cricket team and has helped many other state and National level athletes to achieve their fitness goal, thereby improving their performance. A strong believer in the verse "Athletes don't eat and exercise, They diet and train" </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Jeyashree B is a qualified Clinical Dietitian and Sports Nutritionist. She holds a Post graduation in "Sports Science, Fitness, and Nutrition" from Dr. BMN College for Arts and Science and was awarded for being the topper</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id28"> of her batch. She has completed the Registered Dietitian Internship at Apollo Hospitals, Chennai, along with her Master's in "Clinical Nutrition and Dietetics" from PSG College of Arts and Science, Coimbatore. She is also NET Qualified for Assistant Professor and was teaching the Budding Nutritionists at "Ethiraj College for Women", Chennai. Her interests lie in the field of Sports Nutrition, she has worked with the Tamil Nadu Women's Cricket team and has helped many other state and National level athletes to achieve their fitness goal, thereby improving their performance. A strong believer in the verse "Athletes don't eat and exercise, They diet and train" <br>&nbsp;</p>
+                    <a href="#block-id28" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id28"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_garima.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Garima Pallavi</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Garima Pallavi</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Garima Pallavi is a Qualified Clinical Nutritionist, with a great experience in Nutrition and Dietetics. She holds a PG degree in Food & Nutrition Science from Acharya Nagarjuna University Centre of Distance Education, Guntur, Andhra Pradesh and has topped in the class. She completed PG degree in Rural heath Development from IGNOU, Ranchi, Jharkhand and Bachelor degree in Clinical nutrition & dietetics from Ranchi Women’s College, Ranchi, Jharkhand. Along with Clinical nutrition and Rural health development, she have interest in Sports Nutrition as well. She has been a health and lifestyle coach for one year and has worked with Gynaecologist, Diabetiologists, Cardiologists and Paediatrician during her work in Ranchi and Hyderabad. Being a Social activist she has also did 3 surveys on nutritional lacking in Rural children of age group 5 – 15 years and Pregnant and lactating mother in the rural areas of Ranchi during her master in Rural development. Currently she is working with QUA NUTRITION as a professional practitioner in Bangalore. When it comes to fitness and lifestyle, she believes:- “Working out does not means just hitting the gym for hours but to have inner peace and to be happy.” </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Garima Pallavi is a Qualified Clinical Nutritionist, with a great experience in Nutrition and Dietetics. She holds a PG degree in Food & Nutrition Science from Acharya Nagarjuna University Centre of Distance Education, </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id29">Guntur, Andhra Pradesh and has topped in the class. She completed PG degree in Rural heath Development from IGNOU, Ranchi, Jharkhand and Bachelor degree in Clinical nutrition & dietetics from Ranchi Women’s College, Ranchi, Jharkhand. Along with Clinical nutrition and Rural health development, she have interest in Sports Nutrition as well. She has been a health and lifestyle coach for one year and has worked with Gynaecologist, Diabetiologists, Cardiologists and Paediatrician during her work in Ranchi and Hyderabad. Being a Social activist she has also did 3 surveys on nutritional lacking in Rural children of age group 5 – 15 years and Pregnant and lactating mother in the rural areas of Ranchi during her master in Rural development. Currently she is working with QUA NUTRITION as a professional practitioner in Bangalore. When it comes to fitness and lifestyle, she believes:- “Working out does not means just hitting the gym for hours but to have inner peace and to be happy.” <br>&nbsp;</p>
+                    <a href="#block-id29" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id29"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/binny.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Binny Dawra</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Binny Dawra</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">"Fitness is not about being better than someone else, it's about being better than you used to be" Binny Dawra is a nutritionist and has completed her Masters in Food Science and Nutrition fromBanasthali Vidyapith University, Jaipur and Bachelors in Nutrition and Dietetics from Delhi University. She has previously worked as a Nutrition and Lifestyle Coach and helped people to achieve their health goals holistically by inculcating lifestyle changes and would love to continue helping her clients make better choices towards a disease-free and healthier future. She aims to help people make healthier food choices and lead a happy life.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">"Fitness is not about being better than someone else, it's about being better than you used to be" Binny Dawra is a nutritionist and has completed her Masters in Food Science and Nutrition fromBanasthali Vidyapith</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id30"> University, Jaipur and Bachelors in Nutrition and Dietetics from Delhi University. She has previously worked as a Nutrition and Lifestyle Coach and helped people to achieve their health goals holistically by inculcating lifestyle changes and would love to continue helping her clients make better choices towards a disease-free and healthier future. She aims to help people make healthier food choices and lead a happy life.<br>&nbsp;</p>
+                    <a href="#block-id30" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id30"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_charvi.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Charvi Bajaj</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Charvi Bajaj</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Charvi Bajaj is a nutritionist with a Masters degree in Food and Nutrition from University of Delhi. She also holds a certificate in Human Recourse Management, diploma in Nutrition and Health Education and a post graduation diploma in Cleanliness, Hygiene and Sanitation Education. She has interned at Nutrition Foundation of India where she got an opportunity to council people living in urban slums of Delhi. She has also worked at Project HOPE as a consultant. She wants to council and motivate people to adopt healthy eating habits and an active lifestyle as according to her it is extremely important. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Charvi Bajaj is a nutritionist with a Masters degree in Food and Nutrition from University of Delhi. She also holds a certificate in Human Recourse Management, diploma in Nutrition and Health Education and a post graduation diploma</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id31"> in Cleanliness, Hygiene and Sanitation Education. She has interned at Nutrition Foundation of India where she got an opportunity to council people living in urban slums of Delhi. She has also worked at Project HOPE as a consultant. She wants to council and motivate people to adopt healthy eating habits and an active lifestyle as according to her it is extremely important. <br>&nbsp;</p>
+                    <a href="#block-id31" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id31"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_anmol.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Anmol Kumar</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Anmol Kumar</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Anmol Kumar is a qualified clinical nutritionist. She has completed her Bachelors specializing in Foods & Nutrition from Delhi University and Masters in Foods & Nutrition from Amity University. She has worked in all the 3 setups i.e., Clinical Nutrition (BL Kapur memorial Hospital), Public Health Nutrition (Nutrition foundation of India) and FMCG Company (GSK consumer healthcare). She has done her dissertation work on the effect of blue light emitted by electronic devices on sleep, eye and cognitive health of young children and how nutrition can help in minimizing the effect of it. She has a keen interest in Clinical and Sports Nutrition.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Anmol Kumar is a qualified clinical nutritionist. She has completed her Bachelors specializing in Foods & Nutrition from Delhi University and Masters in Foods & Nutrition from Amity University. She has worked in all the </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id32">3 setups i.e., Clinical Nutrition (BL Kapur memorial Hospital), Public Health Nutrition (Nutrition foundation of India) and FMCG Company (GSK consumer healthcare). She has done her dissertation work on the effect of blue light emitted by electronic devices on sleep, eye and cognitive health of young children and how nutrition can help in minimizing the effect of it. She has a keen interest in Clinical and Sports Nutrition.<br>&nbsp;</p>
+                    <a href="#block-id32" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id32"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_nikita.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Nikita Goel</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Nikita Goel</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Nikita Goel completed her Graduation and Post Graduation in Food and Nutrition from University of Delhi. In the past, she has worked as an intern with Nutrition Foundation of India and Confederation of Indian Industry. She has a keen interest in the field of nutrition and believes “Medicine may or may not cure but optimum nutrition definitely heals and prevents”. She is enthusiastic about inspiring people to achieve their health goals and is passionate to make a difference to their lives. She is a patient listener and always likes to understand her clients better.“Proper food behavior takes time to transform into a food habit, but once it becomes a habit- it stays and does wonders for your health.” With this as her mantra, her goal is to inculcate these habits in her clients and make these a part and parcel of their lives.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Nikita Goel completed her Graduation and Post Graduation in Food and Nutrition from University of Delhi. In the past, she has worked as an intern with Nutrition Foundation of India and Confederation of Indian Industry. </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id33">She has a keen interest in the field of nutrition and believes “Medicine may or may not cure but optimum nutrition definitely heals and prevents”. She is enthusiastic about inspiring people to achieve their health goals and is passionate to make a difference to their lives. She is a patient listener and always likes to understand her clients better.“Proper food behavior takes time to transform into a food habit, but once it becomes a habit- it stays and does wonders for your health.” With this as her mantra, her goal is to inculcate these habits in her clients and make these a part and parcel of their lives.<br>&nbsp;</p>
+                    <a href="#block-id33" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id33"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_jeanne_ribeiro.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Jeanne Ribeiro</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Jeanne Ribeiro</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Jeanne Ribeiro is a Qualified Clinical Nutritionist and a Certified Diabetes Educator. She has worked extensively to enhance the quality of healthcare in the clinical sector. Her experience is diverse from Medical Nutrition Therapy in adults with Cardiovascular Diseases, Critical Care and Diabetes to Pediatric Nutrition. Originally from Goa, she has completed her Masters in Nutrition & Dietetics from Symbiosis International University in Pune. She completed her Bachelor’s degree in Pharmacy from Goa College of Pharmacy and is a Registered Pharmacist. She is also a Certified Diabetes Educator with PG Certificate in Diabetes Education recognized by World Health Organization and International Diabetes Federation. She is a Lifetime member of the Indian Dietetic Association. She has worked with a Multi-Speciality Tertiary Care Hospital in Mumbai - Sir H.N.Reliance Foundation Hospital & Research Centre and has interned at Asian Heart Institute and Prince Aly Khan Hospital. She has also interned with Foundation for Mother and Child Health. She has provided services as a Community Based Rehabilitation Worker for Sense International, an International Organisation, in the field of Deaf-blindness. Her interest in the field of Nutrition lies in Weight Management, Pediatric Nutrition & Sports Nutrition. Currently employed at Qua Nutrition, she believes Changing what we eat has the power to change our lives. So create healthy habits, not restrictions. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Jeanne Ribeiro is a Qualified Clinical Nutritionist and a Certified Diabetes Educator. She has worked extensively to enhance the quality of healthcare in the clinical sector. Her experience is diverse from Medical Nutrition</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id34"> Therapy in adults with Cardiovascular Diseases, Critical Care and Diabetes to Pediatric Nutrition. Originally from Goa, she has completed her Masters in Nutrition & Dietetics from Symbiosis International University in Pune. She completed her Bachelor’s degree in Pharmacy from Goa College of Pharmacy and is a Registered Pharmacist. She is also a Certified Diabetes Educator with PG Certificate in Diabetes Education recognized by World Health Organization and International Diabetes Federation. She is a Lifetime member of the Indian Dietetic Association. She has worked with a Multi-Speciality Tertiary Care Hospital in Mumbai - Sir H.N.Reliance Foundation Hospital & Research Centre and has interned at Asian Heart Institute and Prince Aly Khan Hospital. She has also interned with Foundation for Mother and Child Health. She has provided services as a Community Based Rehabilitation Worker for Sense International, an International Organisation, in the field of Deaf-blindness. Her interest in the field of Nutrition lies in Weight Management, Pediatric Nutrition & Sports Nutrition. Currently employed at Qua Nutrition, she believes Changing what we eat has the power to change our lives. So create healthy habits, not restrictions. <br>&nbsp;</p>
+                    <a href="#block-id34" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id34"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_nikita_narang.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Nikita Narang</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Nikita Narang</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Nikita Narang is a Nutritionist and Certified Diabetes Educator. She has completed her Masters in Foods and Nutrition from Amity University, Noida and Certificate Course in National Diabetes Educator Program run by Dr. Mohan’s Diabetes Education Academy. She has attended a two-day workshop cum certificate course in Nutrigenomics. She holds a Bachelors degree in Home Science with specialization in Foods and Nutrition from University of Delhi. As a part of her Masters Dissertation, she has worked on the effect on dietary protein intake on hypobaric hypoxia induced skeletal muscle damage at Defence Institute of Physiology and Allied Sciences, DRDO and has interned at B L Kapur Super Speciality Hospital, New Delhi. Her interest lies in clinical nutrition and therapeutic interventions. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Nikita Narang is a Nutritionist and Certified Diabetes Educator. She has completed her Masters in Foods and Nutrition from Amity University, Noida and Certificate Course in National Diabetes Educator Program run by </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id35">Dr. Mohan’s Diabetes Education Academy. She has attended a two-day workshop cum certificate course in Nutrigenomics. She holds a Bachelors degree in Home Science with specialization in Foods and Nutrition from University of Delhi. As a part of her Masters Dissertation, she has worked on the effect on dietary protein intake on hypobaric hypoxia induced skeletal muscle damage at Defence Institute of Physiology and Allied Sciences, DRDO and has interned at B L Kapur Super Speciality Hospital, New Delhi. Her interest lies in clinical nutrition and therapeutic interventions.<br>&nbsp;</p>
+                    <a href="#block-id35" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id35"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_vishnu_priya.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Vishnu Priya</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Vishnu Priya</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Vishnu Priya has completed her B.Sc in Clinical Nutrition and Dietetics from Ranchi University with Msc from Osmania University in Nutrition & dietetics. Beside that she has done 2 month internship in Aditya hospital in Hyderabad and is qualified for assistant professor in NET. She is interested to work in clinical sector. She believes that medicine can be replaced by some kind of superfood or diet for various health conditions. She would like to spread this knowledge in community where medicines are economically not approachable but health can be maintained by their daily diet only. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Vishnu Priya has completed her B.Sc in Clinical Nutrition and Dietetics from Ranchi University with Msc from Osmania University in Nutrition & dietetics. Beside that she has done 2 month internship in Aditya hospital in </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id36">Hyderabad and is qualified for assistant professor in NET. She is interested to work in clinical sector. She believes that medicine can be replaced by some kind of superfood or diet for various health conditions. She would like to spread this knowledge in community where medicines are economically not approachable but health can be maintained by their daily diet only.<br>&nbsp;</p>
+                    <a href="#block-id36" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id36"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_diksha_banthia.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Diksha Banthia</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Diksha Banthia</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">completed her Bachelors in Food and Nutrition from JD Birla institute, Kolkata; and Masters in Food and Nutrition from IIS University Jaipur. She has successfully completed a research project entitled "Development and Sensory Evaluation of Food Products for Chronic Kidney Disease patients" under the IIS university Jaipur. She has a work experience of total 2 and 1/2 years in different Hospitals like AMRI Hospital ,Kolkata, Fortis Hospital Kolkata and Maharaja Agrasen Hospital, Siliguri where she gained knowledge in various medical fields, and handled different clinical cases. She also has interest in sports Nutrition. She believes in "Let food be thy medicine and medicine be thy food" by Hippocrate.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">completed her Bachelors in Food and Nutrition from JD Birla institute, Kolkata; and Masters in Food and Nutrition from IIS University Jaipur. She has successfully completed a research project entitled "Development</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id37"> and Sensory Evaluation of Food Products for Chronic Kidney Disease patients" under the IIS university Jaipur. She has a work experience of total 2 and 1/2 years in different Hospitals like AMRI Hospital ,Kolkata, Fortis Hospital Kolkata and Maharaja Agrasen Hospital, Siliguri where she gained knowledge in various medical fields, and handled different clinical cases. She also has interest in sports Nutrition. She believes in "Let food be thy medicine and medicine be thy food" by Hippocrate.<br>&nbsp;</p>
+                    <a href="#block-id37" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id37"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_nihath_tazeen_k.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Nihath Tazeen K</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Nihath Tazeen K</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Nihath is a Dietitian holding her Master’s Degree in Clinical Nutrition from Sri Ramachandra Medical College, Chennai. She did her graduation in Nutrition, Food Service Management and Dietetics from Women’s Christian College, Chennai. She believes that Diet is not about what you eat but it is about how much you eat. She has done several Nutrition Education Programs to a wide range of population including tribal groups and school children during her college days. She has also done her RD internship from Apollo Hospitals, Chennai. Her interest lies in Clinical/Medical cases, weight management, Fertility and Sports Nutrition. She believes in the sayings "To eat is a necessity, but to eat intelligently is an art" </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Nihath is a Dietitian holding her Master’s Degree in Clinical Nutrition from Sri Ramachandra Medical College, Chennai. She did her graduation in Nutrition, Food Service Management and Dietetics from Women’s Christian</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id38"> College, Chennai. She believes that Diet is not about what you eat but it is about how much you eat. She has done several Nutrition Education Programs to a wide range of population including tribal groups and school children during her college days. She has also done her RD internship from Apollo Hospitals, Chennai. Her interest lies in Clinical/Medical cases, weight management, Fertility and Sports Nutrition. She believes in the sayings "To eat is a necessity, but to eat intelligently is an art"<br>&nbsp;</p>
+                    <a href="#block-id38" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id38"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_sneha shukla.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Sneha shukla</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Sneha shukla</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Sneha shukla is a qualified sports nutritionist .she has completed her graduation with majors in zoology along with Psychology honors as extra credits. She further pursued masters in sports nutrition.She interned with a sports association, Mumbai gaining experience with MCA cricket players, amateur football players and elite tennis players.She had also an opportunity to work for projects on different clinical conditions like cancer, congenital diseases etc.Her dissertation topic for masters was Physical, Nutritional and Psychological status of Kathak dancers.(AGE-15-24 yrs.)Her interest area lies in diseases and pediatrics and while forte is counseling.She believes in idea of "LOVE THYSELF - first key to being best version of yourself is through holistic health". </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Sneha shukla is a qualified sports nutritionist .she has completed her graduation with majors in zoology along with Psychology honors as extra credits. She further pursued masters in sports nutrition.She interned </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id39">with a sports association, Mumbai gaining experience with MCA cricket players, amateur football players and elite tennis players.She had also an opportunity to work for projects on different clinical conditions like cancer, congenital diseases etc.Her dissertation topic for masters was Physical, Nutritional and Psychological status of Kathak dancers.(AGE-15-24 yrs.)Her interest area lies in diseases and pediatrics and while forte is counseling.She believes in idea of "LOVE THYSELF - first key to being best version of yourself is through holistic health".<br>&nbsp;</p>
+                    <a href="#block-id39" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id39"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_dheeraja_devi_v.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Dheeraja Devi V</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Dheeraja Devi V</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Dheeraja Devi V is Food Science and Nutrition Graduate from Dr.NGP Arts and Science College, Coimbatore . She has a training experience at KMCH, Coimbatore as clinical dietitian. She pursued her Masters in Foods and Nutrition from PSG college of Arts and Science, Coimbatore and interned as a quality controller at AMUL,Gujarat . She also have completed many online courses based on clinical nutrition and completed HBAC Level 3 HACCP for manufacturing and ISO 22000:2005 Food Safety Management Systems- Requirements for any organisation in the Food Chain Awareness Programme and also attended Fostac supervisor special training in milk and milk products course by AFSTI. She is very keen and interested to implement quality eating for healthy lifestyle. She believes that good food and eating habits is always a priceless medicine for every disease. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Dheeraja Devi V is Food Science and Nutrition Graduate from Dr.NGP Arts and Science College, Coimbatore . She has a training experience at KMCH, Coimbatore as clinical dietitian. She pursued her Masters in Foods and Nutrition from</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id40"> PSG college of Arts and Science, Coimbatore and interned as a quality controller at AMUL,Gujarat . She also have completed many online courses based on clinical nutrition and completed HBAC Level 3 HACCP for manufacturing and ISO 22000:2005 Food Safety Management Systems- Requirements for any organisation in the Food Chain Awareness Programme and also attended Fostac supervisor special training in milk and milk products course by AFSTI. She is very keen and interested to implement quality eating for healthy lifestyle. She believes that good food and eating habits is always a priceless medicine for every disease. <br>&nbsp;</p>
+                    <a href="#block-id40" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id40"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_Smeetal_Pereira.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Smeetal Pereira</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Smeetal Pereira</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Smeetal Pereira is a qualified Dietitian and Nutritionist. She has completed her Bachelor’s in Microbiology, post graduate diploma in quality assurance and master’s in Foods, Nutrition and Dietetics from College of Home Science, Nirmala Niketan. She has interned at Freedom where she was responsible for the dietary assessment of footballers. She has done research in assessing the awareness and consumption of vitamin B12 among women and enrichment of food products with vitamin B12 through microbial fermentation. She believes that "the greatest wealth is health" </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Smeetal Pereira is a qualified Dietitian and Nutritionist. She has completed her Bachelor’s in Microbiology, post graduate diploma in quality assurance and master’s in Foods, Nutrition and Dietetics from College of </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id41">Home Science, Nirmala Niketan. She has interned at Freedom where she was responsible for the dietary assessment of footballers. She has done research in assessing the awareness and consumption of vitamin B12 among women and enrichment of food products with vitamin B12 through microbial fermentation. She believes that "the greatest wealth is health" <br>&nbsp;</p>
+                    <a href="#block-id41" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id41"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_kalyani_mankar.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Kalyani Mankar</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Kalyani Mankar</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">"Diet isnt just a trend, weight isn’t just a number. It’s just another way to live a little longer!"Kalyani Mankar, a qualified clinical dietitian believes that eating right is the biggest investment one could do for themselves. She has done her graduation in Food Science and Nutrition from S.V.T College of Home Science, Mumbai and Master’s in Clinical Nutrition and Dietetics from S.N.D.T, Women’s University, Juhu, Mumbai. She has interned at Wah Restraunts, Mumbai and King Edward Memorial Hospital, Parel, Mumbai, and so has an industrial as well as hospital experience. She has a keen interest in the area of Sports Nutrition. She has done her dissertation as partial fulfillment for the degree of Master’s and the topic was ‘Nutrient Adequacy In PCOS Women.’</p>
+                    <p class="mt-0 mb-0 p-10 text-center">"Diet isnt just a trend, weight isn’t just a number. It’s just another way to live a little longer!"Kalyani Mankar, a qualified clinical dietitian believes that eating right is the biggest investment one could do for themselves.</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id42"> She has done her graduation in Food Science and Nutrition from S.V.T College of Home Science, Mumbai and Master’s in Clinical Nutrition and Dietetics from S.N.D.T, Women’s University, Juhu, Mumbai. She has interned at Wah Restraunts, Mumbai and King Edward Memorial Hospital, Parel, Mumbai, and so has an industrial as well as hospital experience. She has a keen interest in the area of Sports Nutrition. She has done her dissertation as partial fulfillment for the degree of Master’s and the topic was ‘Nutrient Adequacy In PCOS Women.’<br>&nbsp;</p>
+                    <a href="#block-id42" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id42"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_lisa_johnson.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Lisa Johnson</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Lisa Johnson</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">"Exercise is King, Nutrition is Queen, put them together and you've got a Kingdom."Lisa Johnson is a Qualified Dietitian. She completed her Masters in Foods, Nutrition and Dietetics from Nirmala Niketan, College of Home Science. Holds a Bachelor’s in Biochemistry from Ramnarain Ruia College, Mumbai. She also holds an Advanced Diploma in Food Science & Quality Control and Food Microbiology. Has done a course in Internal Auditor Training in Hazard Analysis & Critical Control Point (Dutch-HACCP) and Research Methods & Statistics. She has conducted a Research on “The Assessment of Dietary Sodium Consumption Pattern of Adolescent Boys and Girls Across Various Income Group” which had a sample size of 300 students. Prior to joining Qua, Lisa worked as a Nutritionist Researcher with Plan My Food. Lisa believes in Investing in early childhood nutrition as a sure-fire strategy, which would have incredible returns in the future. She is proactive towards spreading awareness about better health and deeply feels that knowledge of eating right and working out is fulfilled at Qua. </p>
+                    <p class="mt-0 mb-0 p-10 text-center">"Exercise is King, Nutrition is Queen, put them together and you've got a Kingdom."Lisa Johnson is a Qualified Dietitian. She completed her Masters in Foods, Nutrition and Dietetics from Nirmala Niketan, College of </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id43">Home Science. Holds a Bachelor’s in Biochemistry from Ramnarain Ruia College, Mumbai. She also holds an Advanced Diploma in Food Science & Quality Control and Food Microbiology. Has done a course in Internal Auditor Training in Hazard Analysis & Critical Control Point (Dutch-HACCP) and Research Methods & Statistics. She has conducted a Research on “The Assessment of Dietary Sodium Consumption Pattern of Adolescent Boys and Girls Across Various Income Group” which had a sample size of 300 students. Prior to joining Qua, Lisa worked as a Nutritionist Researcher with Plan My Food. Lisa believes in Investing in early childhood nutrition as a sure-fire strategy, which would have incredible returns in the future. She is proactive towards spreading awareness about better health and deeply feels that knowledge of eating right and working out is fulfilled at Qua. <br>&nbsp;</p>
+                    <a href="#block-id43" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id43"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_diksha_saluja.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Diksha Saluja</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Diksha Saluja</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more"> M.Sc. in Sports Nutrition with a Bachelor’s degree focusing on Nutrition, Dietetics, Chemistry, and Human Development, Diksha Saluja believes that a healthy mind resides in a healthy body. Thus, in her consultations she stresses on a diet that goes beyond tracking calories or macro nutrients and helps her clients achieve mindfulness as well.Having developed an early interest in the field, thanks to her mother who always emphasized on the necessity of eating right, she has been a regular part of the Indian Dietetics Association Conference in Bangalore and Mumbai. She has profound interest in pediatrics and sports nutrition. Prior to joining Qua, she worked as an interim Sports Nutrition Consultant for 30 amateur footballers with NGO Rainbow and as an interim Pediatric Consultant for 6 children with Funday Sports Academy. Certified in Human Physiology and Nutritional Genomics, Diksha has counselled 40 women in Mumbai about their dietary needs based on their lifestyle. As a part of Vigyan Yagnya, KJSOM, she also educated attendees regarding the sugar content in packaged beverages and its potential effects. Besides being a passionate nutritionist, Diksha is in cognizant of her responsibilities towards the environment too. She has completed the Green Revolution Global Certification Program and created awareness regarding the use of cloth bags during the same. At Qua, Diksha Saluja wants to bring about a health revolution in the country while being attentive to the convenience of every client she attends to. </p>
+                    <p class="mt-0 mb-0 p-10 text-center"> M.Sc. in Sports Nutrition with a Bachelor’s degree focusing on Nutrition, Dietetics, Chemistry, and Human Development, Diksha Saluja believes that a healthy mind resides in a healthy body. Thus, in her consultations she</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id44"> stresses on a diet that goes beyond tracking calories or macro nutrients and helps her clients achieve mindfulness as well.Having developed an early interest in the field, thanks to her mother who always emphasized on the necessity of eating right, she has been a regular part of the Indian Dietetics Association Conference in Bangalore and Mumbai. She has profound interest in pediatrics and sports nutrition. Prior to joining Qua, she worked as an interim Sports Nutrition Consultant for 30 amateur footballers with NGO Rainbow and as an interim Pediatric Consultant for 6 children with Funday Sports Academy. Certified in Human Physiology and Nutritional Genomics, Diksha has counselled 40 women in Mumbai about their dietary needs based on their lifestyle. As a part of Vigyan Yagnya, KJSOM, she also educated attendees regarding the sugar content in packaged beverages and its potential effects. Besides being a passionate nutritionist, Diksha is in cognizant of her responsibilities towards the environment too. She has completed the Green Revolution Global Certification Program and created awareness regarding the use of cloth bags during the same. At Qua, Diksha Saluja wants to bring about a health revolution in the country while being attentive to the convenience of every client she attends to. <br>&nbsp;</p>
+                    <a href="#block-id44" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id44"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_manisha_ghodke.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Manisha ghodke</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Manisha ghodke</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Manisha ghodke is a certified dietitian. She has completed her degree in nutrition and food technology from Osmania University College and Masters in nutrition and dietetics from the same college. She has worked in a fitness centre for 2 years and 2months.She handled clients with obesity related complications like PCOS, diabetes, hypertension, hypothyroidism, weight gain factors etc. Her interest lies in clinical and sports nutrition. In masters , she has done a research on 'Impact of diet and exercise in overweight and obese adults' and proved that diet and exercise combindly gives great results in weight loss. 'Nutrition isn't just about eating, it is about learning to live.</p>
+                    <p class="mt-0 mb-0 p-10 text-center">Manisha ghodke is a certified dietitian. She has completed her degree in nutrition and food technology from Osmania University College and Masters in nutrition and dietetics from the same college. She has worked in a fitness centre</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id45"> for 2 years and 2months.She handled clients with obesity related complications like PCOS, diabetes, hypertension, hypothyroidism, weight gain factors etc. Her interest lies in clinical and sports nutrition. In masters , she has done a research on 'Impact of diet and exercise in overweight and obese adults' and proved that diet and exercise combindly gives great results in weight loss. 'Nutrition isn't just about eating, it is about learning to live.<br>&nbsp;</p>
+                    <a href="#block-id45" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id45"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="mb-30 mb-sm-30 pl-0">
+            <div class="col-md-2 mb-30 mb-sm-30 pl-0">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/team/avatar_monika_kalindi.png" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Monika Kalindi</h4>
+                  <h5 class="text-gray text-dark-01 text-dark-01 mt-5 mb-5 text-center">Monika Kalindi</h5>
                   <h6 class="text-theme-colored mt-0 mb-5 text-center">Nutritionist</h6>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center more">Small Changes in diet & lifestyle everyday adds up to bigger & Better health outcome." Monika Kalindi is a qualified clinical Dietitian & Certified Diabetes Educator.She is a graduate in Microbiology & has done Advance PG Diploma in Dietetics from G.H Raisoni Polytechnic (Nagpur) followed by Masters in Dietetics & Food Service Management.She has interned at Arneja Heart Institute (Nagpur) & Ruby Hall Clinic (Pune) & has over 3yrs of clinical experience in Diabetes clinic (DCRC, Nagpur).She has co-authored two research papers. One titled Protein Deficiency Diabetes Mellitus-PDDM: An Adult Onset Insulin Requiring Diabetes Occurring Due to Poverty & Maternal Malnutrition presented at Indian Dietetic Association- (New Delhi, 2014) & another titled Prevalence of Vasculopathy amongst Type 2 Diabetics at the 1st Visit to Tertiary Care Center presented at 6th world congress of Diabetes India (Chennai, 2015). </p>
+                    <p class="mt-0 mb-0 p-10 text-center">Small Changes in diet & lifestyle everyday adds up to bigger & Better health outcome." Monika Kalindi is a qualified clinical Dietitian & Certified Diabetes Educator.She is a graduate in Microbiology & has done Advance PG </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id46">Diploma in Dietetics from G.H Raisoni Polytechnic (Nagpur) followed by Masters in Dietetics & Food Service Management.She has interned at Arneja Heart Institute (Nagpur) & Ruby Hall Clinic (Pune) & has over 3yrs of clinical experience in Diabetes clinic (DCRC, Nagpur).She has co-authored two research papers. One titled Protein Deficiency Diabetes Mellitus-PDDM: An Adult Onset Insulin Requiring Diabetes Occurring Due to Poverty & Maternal Malnutrition presented at Indian Dietetic Association- (New Delhi, 2014) & another titled Prevalence of Vasculopathy amongst Type 2 Diabetics at the 1st Visit to Tertiary Care Center presented at 6th world congress of Diabetes India (Chennai, 2015).<br>&nbsp;</p>
+                    <a href="#block-id46" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id46"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
@@ -794,18 +824,77 @@
   
   <!-- Footer -->
   <footer class="footer divider layer-overlay overlay-dark" data-bg-img="images/bg/bg1.jpg">
-    <div class="container pt-100 pb-30">
+    <div class="container pt-50 pb-10">
       <div class="row">
         <div class="col-sm-6 col-md-3">
-          <div class="widget dark"> <img class="mt-10 mb-20" alt="" src="images/logo.png">
-            <p class="font-12">QUA Nutrition, we realize that each person is different, with varied health and sports_nutrition needs. Our motto ‘Eat to your capacity’ caters to each individual’s specific health requirement. Thus, discovering “your capacity” synonymous to Qua!</p>
-            <ul class="styled-icons icon-bordered small square list-inline mt-10">
-              <li><a target="_blank" href="https://www.facebook.com/quanutrition.bangalore?fref=ts"><i class="fa fa-facebook text-white"></i></a></li>
-              <li><a target="_blank" href="https://twitter.com/Qua_Nutrition?lang=en"><i class="fa fa-twitter text-white"></i></a></li>
-              <li><a target="_blank" href="https://plus.google.com/+quanutritionbestdietplans"><i class="fa fa-google-plus text-white"></i></a></li>
-              <li><a target="_blank" href="https://www.youtube.com/user/quanutrition"><i class="fa fa-youtube text-white"></i></a></li>
-            </ul>
-          </div>
+            <h3 class="mt-0 col-md-2 mb-30">Quick Contact Form</h3>
+            <!-- Contact Form -->
+            <form id="contact_form" name="contact_form" class="" action="#" method="post">
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input id="form_subject" name="form_subject" class="form-control required" type="text" placeholder="Enter Your City">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <textarea id="form_message" name="form_message" class="form-control required" rows="3" placeholder="Enter Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
+                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
+                <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+              </div>
+            </form>
+
+            <!-- Contact Form Validation-->
+            <script type="text/javascript">
+              $("#contact_form").validate({
+                submitHandler: function(form) {
+                  var form_btn = $(form).find('button[type="submit"]');
+                  var form_result_div = '#form-result';
+                  $(form_result_div).remove();
+                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                  var form_btn_old_msg = form_btn.html();
+                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                  $(form).ajaxSubmit({
+                    dataType:  'json',
+                    success: function(data) {
+                      if( data.status == 'true' ) {
+                        $(form).find('.form-control').val('');
+                      }
+                      form_btn.prop('disabled', false).html(form_btn_old_msg);
+                      $(form_result_div).html(data.message).fadeIn('slow');
+                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                    }
+                  });
+                }
+              });
+            </script>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
@@ -813,17 +902,17 @@
             <div class="row">
               <div class="col-sm-6 col-md-6">
                 <ul class="list angle-double-right list-border">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Packages</a></li>
-                  <li><a href="#">Why Qua?</a></li>
-                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Nutrition_package.html">Packages</a></li>
+                  <li><a href="About.html">Why Qua?</a></li>
+                  <li><a href="Testimonials.html">Testimonials</a></li>
                 </ul>
               </div>
               <div class="col-sm-6 col-md-6">
                 <ul class="list angle-double-right list-border">
-                  <li><a href="#">Video</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="Videos.html">Video</a></li>
+                  <li><a href="Team.html">Team</a></li>
+                  <li><a href="Contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -839,8 +928,7 @@
             <a href="Nutrition_packages/sports_nutrition.html"><p style="font-size: 10px;">Best Sports Nutritionist Delhi</p></a>
             <a href="Nutrition_packages/nutrition_kids.html"><p style="font-size: 10px;">Nutrition For Kids</p></a>
             <a href="Nutrition_packages/genetic_nutrition.html"><p style="font-size: 10px;">Best Nutritionist</p></a>
-            <a href="Nutrition_packages/nutrition_men.html"><p style="font-size: 10px;">Nutrition for men</p></a>
-            <a href="Nutrition_packages/nutrition_women.html"><p style="font-size: 10px;">Nutrition for women</p></a>
+            <a href="Nutrition_packages/nutrition_you.html"><p style="font-size: 10px;">Nutrition for you</p></a>
             <a href="Nutrition_packages/sports_nutrition.html"><p style="font-size: 10px;">Best Sports Nutritionist</p></a>
             <a href="Nutrition_packages/sports_nutrition.html"><p style="font-size: 10px;">Sports Nutritionist Chennai</p></a>
             <a href="index.html"><p style="font-size: 10px;">Best Nutritionist Goa</p></a>
@@ -856,14 +944,22 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-2">
+          <div class="widget dark mb-10"> <img height="80" width="auto" class="mb-10" alt="" src="images/logo.png">
+            <p class="font-12">QUA Nutrition, we realize that each person is different.</p>
+            <!-- <ul class="styled-icons icon-bordered small square list-inline mt-10">
+              <li><a target="_blank" href="https://www.facebook.com/quanutrition.bangalore?fref=ts"><i class="fa fa-facebook text-white"></i></a></li>
+              <li><a target="_blank" href="https://twitter.com/Qua_Nutrition?lang=en"><i class="fa fa-twitter text-white"></i></a></li>
+              <li><a target="_blank" href="https://plus.google.com/+quanutritionbestdietplans"><i class="fa fa-google-plus text-white"></i></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/user/quanutrition"><i class="fa fa-youtube text-white"></i></a></li>
+            </ul> -->
+          </div>
           <div class="widget dark">
-            <h5 class="widget-title line-bottom">Opening Hours</h5>
+            <h5 class="widget-title line-bottom mb-0">Opening Hours</h5>
             <ul class="opening-hours list-border">
               <li><p><span class="text-white">Monday To Saturday:</span> <br>
                 10:00 am to 6:00 pm</p>
               </li>
-              <li><p><span class="text-white">Monday To Friday:</span> <br>
-                Closed</p>
+              <li><p><span class="text-white">Sunday:</span> Closed</p>
               </li>
               </li>
             </ul>
@@ -871,7 +967,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid copy-right p-20">
+    <div class="container-fluid copy-right p-10">
       <div class="row text-center">
         <div class="col-md-12">
           <p class="font-11 text-white m-0">Copyright &copy;2018 Quanutrition. All Rights Reserved</p>
@@ -879,8 +975,111 @@
       </div>
     </div>
   </footer>
+  <a onclick="topFunction()" class="float-01" id="myBtn" data-toggle="modal" data-target="#schedulecall">
+  <i class="fa fa-phone my-float-01"></i>
+  </a>
   <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a> </div>
 <!-- end wrapper --> 
+
+<!-- Modal -->
+<div class="modal fade" id="schedulecall" tabindex="-1" role="dialog" aria-labelledby="schedulecallLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="section-title mb-0">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h4 class="text-uppercase title-01">Schedule a call</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form id="contact_form" name="contact_form" class="" action="#" method="post">
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input id="form_subject" name="form_subject" class="form-control required" type="text" placeholder="Enter Your City">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <select name="form_time" id="form_time" class="form-control" style="color: #ccc;">
+                      <option value="" style="background: #000;color: #ccc;">Time</option>
+                      <option value="9:00 AM" style="background: #000;color: #ccc;">9:00 AM</option>
+                      <option value="9:00 AM" style="background: #000;color: #ccc;">9:30 AM</option>
+                      <option value="9:00 AM" style="background: #000;color: #ccc;">10:00 AM</option>
+                      <option value="9:00 AM" style="background: #000;color: #ccc;">10:30 AM</option>
+                      <option value="9:00 AM" style="background: #000;color: #ccc;">11:00 AM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input class="form-control required date-picker .text-dark-01" type="text" placeholder="Appoinment Date" aria-required="true" style="color: #ccc;">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <select id="bmode" name="bmode" class="form-control" required="" aria-required="true" style="width: 100%;color: #ccc;">
+                      <option value="" style="background: #000;color: #ccc;">Preferred mode of consultation:*</option>
+                      <option value="Phone" style="background: #000;color: #ccc;">Phone</option>
+                      <option value="Email" style="background: #000;color: #ccc;">Email</option>
+                      <option value="Clinic" style="background: #000;color: #ccc;">Clinic</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
+                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Comfirm</button>
+                  </div>
+                </div>
+                <div class="col-sm-4 text-center pt-10">
+                  <p class="text-dark-001">OR</p>
+                </div>
+                <div class="col-sm-4 text-right">
+                  <div class="form-group">
+                     <button type="button" class="btn btn-default btn-flat btn-primary"><a class="text-dark" href="tel: +91-9743430000">Call us</a></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Footer Scripts --> 
 <!-- JS | Calendar Event Data --> 

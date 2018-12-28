@@ -7797,3 +7797,6 @@ table {
 z-index: 9999;
 margin-left: 10px;
 }
+.front-index {
+  z-index: 9999;
+}

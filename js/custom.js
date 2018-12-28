@@ -1256,7 +1256,7 @@ var THEMEMASCOT = {};
                     $portfolio_gallery.isotope({
                         itemSelector: '.gallery-item',
                         layoutMode: isotope_mode,
-                        filter: "*"
+                        filter: ".sports"
                     });
                 });
             }

@@ -1722,6 +1722,9 @@ section > .container-fluid {
     text-align: center;
   }
 }
+.menuzord {
+  margin-left: -40px;
+}
 .menuzord-brand img {
   max-height: 38px;
   padding-right: 30px !important;
@@ -1827,8 +1830,8 @@ section > .container-fluid {
   position: absolute;
   top: 0;
   height: 108%;
-  left: -150px;
-  width: 150px;
+  left: -130px;
+  width: 130px;
 }
 /*.stylish-header:after {
   content: '';

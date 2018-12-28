@@ -67,6 +67,9 @@
 	.menuzord {
 	  margin-left: 0px;
 	}
+	.modal-md {
+	  width: 100%;
+	}
 }
 
 /* Medium Devices, Desktops */

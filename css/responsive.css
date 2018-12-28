@@ -64,6 +64,13 @@
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.nav-tabs {
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+
+  }
 	.menuzord {
 	  margin-left: 0px;
 	}

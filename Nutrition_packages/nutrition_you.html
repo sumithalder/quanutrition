@@ -178,6 +178,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: block;
     height: 45px;
   }
+  .nav-tabs {
+    margin: 0 35%;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+
+  }
+  .nav-tabs li a{
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+  }
+    .nav-tabs li a:active{
+    color: #000 !important;
+  }
+  @media only screen and (max-width : 768px) {
+  .nav-tabs {
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+
+  }
+
+}
 </style>
 </head>
 <body class="dark">
@@ -206,7 +232,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </ul>
             </nav> -->
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 front-index">
             <div class="widget m-0 mt-5 no-border">
               <ul class="list-inline text-right sm-text-center">
                 <li class="pl-10 pr-10 mb-0 pb-0">
@@ -221,7 +247,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </ul>
             </div>
           </div>
-          <div class="col-md-2 text-right flip sm-text-center">
+          <div class="col-md-2 text-right flip sm-text-center front-index">
             <div class="widget m-0">
               <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm">
                 <li class="mb-0 pb-0"><a href="https://www.facebook.com/QUAnutritionCLINICS/" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -239,7 +265,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand stylish-header stylish pull-left flip" href="javascript:void(0)"><img class="stylish-line" height="75" src="../images/logo.png" alt="logo"></a>
+              <div id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand stylish-header stylish pull-left flip" href="javascript:void(0)"><img class="stylish-line" height="75" src="../images/logo.png" alt="logo"></a>
                 <ul class="menuzord-menu">
                   <li><a href="../index.html">Home</a></li>
                   <li><a href="../Nutrition_package.html">Packages</a>
@@ -250,7 +276,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       <li><a href="genetic_nutrition.html"><b>Genetic Testing</b></a></li>
                       <li><a href="new_life.html"><b>New Life</b></a></li>
                       <li><a href="nutrition_kids.html"><b>Nutrition For Kids</b></a></li>
-                      <li><a href="nutrition_you.html"><b>Nutrition For men/women</b></a></li>
+                      <li><a href="nutrition_you.html"><b>Nutrition For Men/Women</b></a></li>
                       <!-- <li><a href="Nutrition_packages/nutrition_women.html"><b>Nutrition For Women</b></a></li> -->
                       <li><a href="beauty.html"><b>Beauty</b></a></li>
                       <li><a href="wedding_bells.html"><b>Wedding Bells</b></a></li>
@@ -295,7 +321,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <h3 class="text-uppercase letter-space-1">Nutrition for you</h3>
                 </div>
               </div> -->
-              <div class="classes-schedules">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#man">I'm Man</a></li>
+                <li><a data-toggle="tab" href="#woman">I'm Women</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="man" class="tab-pane fade in active">
+                  <div class="classes-schedules">
                 <p style="text-align: justify;">Men are typically bigger than women and have more muscles, they require more calories throughout the day.</p>
                 <p style="text-align: justify;">Males of all ages can benefit from eating a balanced and nutritious varied diet, getting enough calcium, avoiding high fat and sugar content (like fast food) and exercising daily.</p>
                 <p style="text-align: justify;">However, if you are worried about your personal nutrition or weight, visit a Nutritionist that can customise the Nutrition plan around your concerns. There are many diets and supplements that can be dangerous to your health. Do not self-medicate and indulge.</p>
@@ -331,6 +363,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p style="text-align: justify;">As you step into your 60s you cannot afford to eat the way you did in your 20s and keep weight off. As you age, you are typically less active and so you lose muscle and gain fat. These things cause metabolism to slow down. So watching what you eat during these years, you can keep your body and mind sharp and extend your quality of life.</p>
               <p style="text-align: justify;">At Qua Nutrition we will customize a plan to suit your age. Our Diet and supplement regime will change the way you feel as you take control of this part of your life towards a fitter healthier you.</p>
               </div>
+                </div>
+                <div id="woman" class="tab-pane fade">
+                  <div class="classes-schedules">
+                    <p style="text-align: justify;">There are only 3 things women need in life – food, water and compliments – Chris Rock </p>
+                    <p>We provide the guide to achieve and deserve all the 3 in abundance and more. </p>
+                    <p style="text-align: justify;">In a women's life, nutrition and regular exercise are the cornerstones of good health and optimal energy. Certain vitamins and minerals become progressively more important at different stages of life. Knowing which element matters most can help woman achieve the fountain of eternal youth.</p>
+                    <p style="text-align: justify;">Eating well is one of the best ways you can take care of yourself and those who depend on you. A healthy diet gives you energy to get through your busy day, supports your mood, helps you maintain your weight, and keeps you looking your best.</p>
+                    <p style="text-align: justify;">Your food choices can help reduce PMS, boost fertility, combat stress, make pregnancy easier, and ease the symptoms of menopause.</p>
+                    <p style="text-align: justify;">"Awareness, not deprivation, informs what you eat”</p>
+                    <p style="text-align: justify;">Nutrition for Girls in Childhood and Early Teens</p>
+                    <p style="text-align: justify;">As girls go into early teens, there is so many physical, hormonal and emotional changes, that nutrition can take a back seat. But in order to have the best a peaceful transition to a young woman, who is confident and ready to take on the world, good health is important. Not only does it keep you healthy, but makes life easy by making you look the best you can. No pimples, great skin, great hair, and an enviable shape. </p>
+                    <p style="text-align: justify;">Look at getting a nutrition plan with Qua Nutrition to keep away the pains of growing up away. Learn how to eat well and correctly to stay young forever. </p>
+                    <h4>Working Executives:</h4>
+                    <p style="text-align: justify;">Young women need a balanced diet to fuel their active bodies and minds. But at this point in life, healthy eating sometimes becomes a challenge. College life and work can interrupt normal patterns of eating. Unhealthy body image issues can take over. In addition, hormonal changes can lead to problems like premenstrual syndrome. The best thing a young woman can do is understand her own body and stay healthy by eating a balanced diet and getting regular physical activity.</p>
+                    <p style="text-align: justify;">Most working executives face long stressful hours, bad cafeteria food, travel and with almost no exercise time. As a result, the body is battered by stress hormones which in turn increase cholesterol, blood pressure and various diet related diseases.  For working executives, life becomes stressful especially with office and household responsibilities and playing the role of a nurturer.</p> 
+                    <p style="text-align: justify;">At Qua Nutrition our experts will guide working executives to make time for food breaks, maintain healthy diet choices and avoid hunger pangs during the day. Our experts will customize your nutrition plans tailored to suit your requirements and workload at home and work.</p>
+                    <h3>Home-makers:</h3>
+                    <p style="text-align: justify;">"I hate the word housewife; I don’t like the word home-maker either. I want to be called Domestic Goddess". - Roseanne. </p>
+                    <p style="text-align: justify;">You are in the profession of ‘making a home’, a secure refuge for your family. It’s time you placed your health and nutritional needs as priority because the wellbeing of your family rests on you. It is time that you put your health in priority and learn how to use these tips for your family as well. </p>
+                    <p style="text-align: justify;">At Qua Nutrition, we recognize your contribution to our social fabric and our Experts will plan your diets and eating habits to keep you healthy and fit to be a SUPERWOMAN! And yes, also a domestic goddess!</p>
+                    <p>The Uncontrollable hormones - </p>
+                    <p style="text-align: justify;">The interplay of hormones throughout a woman’s menstrual cycle affects her body and state of mind. Some women also have food cravings as their period approaches with higher energy intake during premenstrual phase. Some women face this more than the others. </p>
+                    <p style="text-align: justify;">Add to the same complexities of conditions like thyroid and PCOS/ PCOD. Medical practioners say that in order to treat these syndromes-  Get rid of the problems it has created (the classic chicken and egg situation).  Life is not becoming uncomplicated soon.</p>
+                    <p>Help is at hand. </p>
+                    <p style="text-align: justify;">Look at a structured nutrition plan with a Nutritionist who specialises in understanding woman hormonal behaviour and look to not only tame your body but your mind as well.</p>
+                    <h4>The Dreaded Menopause </h4>
+                    <p style="text-align: justify;">No one looks forward to the time, when the woman body resets itself. Menopause is an individual experience for every woman, a time of transition, the end of the fertile years.</p>
+                    <p style="text-align: justify;">Menopause is caused by a fall in the amount of the oestrogen hormone produced by the ovaries. The decline/ absence of oestrogen can mean varied changes in energy levels, memory, bone health, hormones, urinary and heart health.</p>
+                    <p style="text-align: justify;">Research’s done recently focus on the effects of optimal nutrition on the health and wellbeing of the women around the time of the menopause. It is increasingly being found that good nutrition and optimising the intake of specific nutrients, together with small lifestyle changes can offer significant help in maintaining a healthy menopause and make a real difference to how women feel.</p>
+                    <p style="text-align: justify;">Menopause affects women in completely different ways, but the most common symptoms include hot flushes, sweating, insomnia, anxiety, impairment of memory and fatigue. Long term consequences due to reduced oestrogen are a decline in libido, osteoporosis, heart disease, even dementia. </p>
+                    <h4>Adding the right foods to your diet as you approach menopause can actually reduce or prevent menopause symptoms. And the earlier you make these dietary changes, the easier menopause can be.</h4>
+                    <p style="text-align: justify;">We believe that in your 50’s, you should have the vitality and the vigour of a body that has 50 more years in her (at least!). At Qua Nutrition we will plan the foods, supplements, nutrition and special elixirs that will keep you protected against most life style diseases during your 50s.</p>
+                  </div>
+                </div>
+              </div>
+              
             </div>
             <div class="col-md-3 pl-60 pl-sm-0 mt-sm-60">
               <div class="widget">

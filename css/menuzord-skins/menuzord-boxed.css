@@ -18,9 +18,7 @@ Boxed Skin
 }
 
 /* Dropdown */
-.menuzord-menu ul.dropdown{
-	top: 79px;
-}
+
 .menuzord-menu ul.dropdown li ul.dropdown{
     top: 0;
 }

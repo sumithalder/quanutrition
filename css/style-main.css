@@ -1278,7 +1278,7 @@ section > .container-fluid {
   height: 50px;
   padding: 2px;
   position: fixed;
-  right: 15px;
+  right: 100px;
   text-align: center;
   text-decoration: none;
   width: 50px;
@@ -1789,8 +1789,11 @@ section > .container-fluid {
   margin: 0;
 }
 .menuzord-brand img {
-  margin-top: 18px;
-  max-height: 38px;
+  margin-top: -5px;
+  max-height: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top:5px;
 }
 .menuzord-menu > li {
   padding: 0;
@@ -1799,9 +1802,7 @@ section > .container-fluid {
   padding: 22px 15px 20px;
   font-size: 14px;
 }
-.menuzord-brand img {
-  max-height: 80px;
-}
+
 
 /*Menuzord Boxed Nav color*/
 .header-nav.navbar-theme-colored .menuzord-menu > li > a {
@@ -1818,7 +1819,7 @@ section > .container-fluid {
   position: relative;
   top: -40%;
   min-height: 80px;
-  padding: 0 0 28px;
+  padding: 0;
   margin-top: -10px !important;
 }
 .stylish-header:before {
@@ -1826,8 +1827,8 @@ section > .container-fluid {
   position: absolute;
   top: 0;
   height: 108%;
-  left: -650px;
-  width: 650px;
+  left: -150px;
+  width: 150px;
 }
 /*.stylish-header:after {
   content: '';
@@ -5311,7 +5312,7 @@ blockquote p {
 */
 .card {
   float: left;
-  min-height: 280px;
+  min-height: 315px;
   padding-bottom: 25%;
   position: relative;
   text-align: center;
@@ -5404,7 +5405,7 @@ blockquote p {
 @media only screen and (min-width: 320px) and (max-width: 449px) {
   .card {
     margin-bottom: 30px;
-    min-height: 300px;
+    min-height: 320px;
   }
 }
 
@@ -7722,10 +7723,10 @@ table {
 .float-01{
   display: none;
   position:fixed;
-  width:60px;
-  height:60px;
+  width:70px;
+  height:70px;
   bottom:10px;
-  right:80px;
+  right:20px;
   color:#FFF;
   background-color:  #FF5722;
   border-radius:50px;
@@ -7736,8 +7737,8 @@ table {
 
 .my-float-01{
   text-align: center;
-  margin: 15px 0px 0px 20px;
-  font-size: 30px;
+  margin: 19px 0px 0px 23px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   cursor: pointer;
@@ -7788,4 +7789,8 @@ table {
 
 .img-display {
   display: none;
+}
+.img-logo-01 {
+z-index: 9999;
+margin-left: 10px;
 }

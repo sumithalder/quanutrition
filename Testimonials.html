@@ -353,6 +353,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Start main-content -->
   <div class="main-content">
 
+
     
     <!-- Section: Team -->
     <section id="trainer" class="bg-light">
@@ -366,8 +367,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
         <div class="section-content pb-10">
+           <!-- Portfolio Filter -->
+          <div id="category" class="portfolio-filter font-alt align-center mb-6 0">
+            <a href="#" class="active text-uppercase" data-filter="all">All</a>
+            <a href="#" class="text-uppercase" data-filter="sports">Sports Nutrition</a>
+            <a href="#" class="text-uppercase" data-filter="weightloss">Weight Loss</a>
+            <a href="#" class="text-uppercase" data-filter="weightgain">Weight Gain</a>
+            <a href="#" class="text-uppercase" data-filter="newlife">New Life</a>
+            <a href="#" class="text-uppercase" data-filter="kids">Nutrition for Kids</a>
+            <a href="#" class="text-uppercase" data-filter="you">Nutrition for You</a>
+            <a href="#" class="text-uppercase" data-filter="beauty">Beauty</a>
+            <a href="#" class="text-uppercase" data-filter="wedding">Wedding Bells</a>
+            <a href="#" class="text-uppercase" data-filter="mental">Mental Nutrition</a>
+            <a href="#" class="text-uppercase" data-filter="medical">Medical Nutrition</a>
+            <a href="#" class="text-uppercase" data-filter="corporate"> Corporate Nutrition</a>
+            <a href="#" class="text-uppercase" data-filter="international">International Plan</a>
+          </div>
+          <!-- End Portfolio Filter -->
+          <!-- <ul id="category" class="list-of-links centered">
+              <li><a href="#" class="current-cat" data-filter="rondvaart">Rondvaart</a></li>
+              <li><a href="#" data-filter="wandelingen">Wandelingen</a></li>
+              <li><a href="#" data-filter="rondleidingen">Rondleidingen</a></li>
+              <li><a href="#" data-filter="groepsarrangementen">Groepsarrangementen</a></li>
+          </ul> -->
           <div class="masonry pb-30">
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/1.jpg" alt="">
@@ -380,7 +404,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/2.jpg" alt="">
@@ -392,7 +416,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/3.jpg" alt="">
@@ -405,7 +429,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/5.jpg" alt="">
@@ -418,7 +442,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/4.jpg" alt="">
@@ -430,7 +454,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/6.jpg" alt="">
@@ -443,7 +467,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/7.jpg" alt="">
@@ -456,7 +480,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/8.jpg" alt="">
@@ -469,7 +493,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-           <div class="item">
+           <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/9.jpg" alt="">
@@ -481,7 +505,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/10.jpg" alt="">
@@ -494,7 +518,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="medical">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/11.jpg" alt="">
@@ -507,7 +531,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/12.jpg" alt="">
@@ -520,7 +544,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/13.jpg" alt="">
@@ -533,7 +557,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/14.jpg" alt="">
@@ -546,7 +570,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/15.jpg" alt="">
@@ -558,7 +582,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/16.jpg" alt="">
@@ -570,7 +594,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/17.jpg" alt="">
@@ -582,7 +606,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/18.jpg" alt="">
@@ -595,7 +619,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/19.jpg" alt="">
@@ -607,7 +631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/20.jpg" alt="">
@@ -619,33 +643,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/21.jpg" alt="">
                   <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Aniruddha Budhya</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For you</h5>
                   <div class="sidebar-box">
-                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I went to Qua Nutrition and met my dietitian Anjum in April with 89 kgs and I am 72 kgs now (October, 2014) with a total drop of 5% of body fat. I have renewed my plan to Genetic Testing now. I would definitely </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id14">recommend this clinic to all. My personal experience. Thank you Qua Nutrition and Anjum.<br>&nbsp;</p>
-                    <a href="#block-id14" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id14"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I went to Qua Nutrition and met my dietitian Anjum in April with 89 kgs and I am 72 kgs now (October, 2014) with a total drop of 5% of body fat. I have renewed my plan to Genetic Testing now. I would definitely </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id002">recommend this clinic to all. My personal experience. Thank you Qua Nutrition and Anjum.<br>&nbsp;</p>
+                    <a href="#block-id002" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id002"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/22.jpg" alt="">
                   <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Mr. Yegnesh</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition for you</h5>
                   <div class="sidebar-box">
-                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">As regards to the feedback on the service and other parameters, I am glad that your services are from a dedicated team and always wiling to help the client reach their goal.</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id15">. The nutrition service is excellent and you are made comfortable and allowed to go slow on the diet. Appreciate the time and effort in understanding the requirement of the client.<br>&nbsp;</p>
-                    <a href="#block-id15" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id15"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">As regards to the feedback on the service and other parameters, I am glad that your services are from a dedicated team and always wiling to help the client reach their goal. The nutrition service</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id001">. is excellent and you are made comfortable and allowed to go slow on the diet. Appreciate the time and effort in understanding the requirement of the client.<br>&nbsp;</p>
+                    <a href="#block-id001" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id001"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/23.jpg" alt="">
@@ -658,7 +682,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="beauty">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/24.jpg" alt="">
@@ -670,7 +694,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="kids">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/25.jpg" alt="">
@@ -683,7 +707,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/26.jpg" alt="">
@@ -696,7 +720,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="medical">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/27.jpg" alt="">
@@ -709,7 +733,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/28.jpg" alt="">
@@ -721,7 +745,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/29.jpg" alt="">
@@ -734,20 +758,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/30.jpg" alt="">
                   <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Gabriello</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Model</h5>
                   <div class="sidebar-box">
-                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">My nutrition sessions with Minacshi have been enjoyable and enlightening. I always believed that I was following a healthy diet but after meeting Minacshi I realised how</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id17"> far off course my diet actually was. She brought a wealth of knowledge both in terms of practical dietary suggestions, but also in explaining the biology behind how different foods affect your body. She is a one of a kind nutritionist. Minacshi did a great job of diagnosing nutritional areas which I could adjust to reach my goals. By taking the time to understand my lifestyle and goals, she was able to give me great recommendations which I’ve enjoyed. My energy levels have improved and she has also helped me achieve a better looking leaner body. I would recommend Qua. You will be pleased.<br>&nbsp;</p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">My nutrition sessions with Minacshi have been enjoyable and enlightening. I always believed that I was following a healthy diet but after meeting Minacshi I realised how far off course my diet actually</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id17"> was. She brought a wealth of knowledge both in terms of practical dietary suggestions, but also in explaining the biology behind how different foods affect your body. She is a one of a kind nutritionist. Minacshi did a great job of diagnosing nutritional areas which I could adjust to reach my goals. By taking the time to understand my lifestyle and goals, she was able to give me great recommendations which I’ve enjoyed. My energy levels have improved and she has also helped me achieve a better looking leaner body. I would recommend Qua. You will be pleased.<br>&nbsp;</p>
                     <a href="#block-id17" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id17"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/31.jpg" alt="">
@@ -760,7 +784,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/32.jpg" alt="">
@@ -773,7 +797,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="medical">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/33.jpg" alt="">
@@ -786,7 +810,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/34.jpg" alt="">
@@ -799,7 +823,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/35.jpg" alt="">
@@ -812,7 +836,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/36.jpg" alt="">
@@ -825,7 +849,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/37.jpg" alt="">
@@ -838,20 +862,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/38.jpg" alt="">
                   <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Anil Panchal</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition for you</h5>
                   <div class="sidebar-box">
-                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">"The Nutritionist was prepared to keep in mind the basic nutrition requirements of any marathoner like normal daily diet, pre-run, during the run and post run. </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id25">The information given by the nutritionist will definitely help a marathoner enjoy the run injury free. Many doubts cleared during the interaction. Thank you."<br>&nbsp;</p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">"The Nutritionist was prepared to keep in mind the basic nutrition requirements of any marathoner like normal daily diet, pre-run, during the run and post run. The information</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id25"> given by the nutritionist will definitely help a marathoner enjoy the run injury free. Many doubts cleared during the interaction. Thank you."<br>&nbsp;</p>
                     <a href="#block-id25" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id25"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/39.jpg" alt="">
@@ -864,7 +888,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/40.jpg" alt="">
@@ -876,7 +900,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/41.jpg" alt="">
@@ -889,7 +913,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/42.jpg" alt="">
@@ -902,7 +926,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/43.jpg" alt="">
@@ -915,7 +939,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/44.jpg" alt="">
@@ -928,7 +952,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/45.jpg" alt="">
@@ -941,14 +965,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
             </div>
-            <div class="item">
+            <div class="item" data-cat="sports">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="images/gallery/46.jpg" alt="">
                   <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Akanksha Salunkhe</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Squash</h5>
                   <div class="sidebar-box">
-                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">Its been a year since i have joined Qua. Iam a professional Squash athlete and before Qua, 'diet' for me was just filling up my stomach so that I dont get hungry. Thier nutrition plan</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id32"> has helped me in so many factors.Its all scientific and up to the mark and will never disappoint you. Its the BEST nutrition clinic in India, all thanks to Ryan sir and his entire team including my personal nutritionist Luana Mascarenhas.<br>&nbsp;</p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">Its been a year since i have joined Qua. Iam a professional Squash athlete and before Qua, 'diet' for me was just filling up my stomach so that I dont get hungry. Thier nutrition plan has helped me in</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id32"> so many factors.Its all scientific and up to the mark and will never disappoint you. Its the BEST nutrition clinic in India, all thanks to Ryan sir and his entire team including my personal nutritionist Luana Mascarenhas.<br>&nbsp;</p>
                     <a href="#block-id32" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id32"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
@@ -1277,6 +1301,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         return false;
     });
 });
+</script>
+<script>
+  // Variable
+var posts = $('.item');
+posts.show();
+
+// Click function
+$( "#category a" ).click(function() { 
+    // Get data of category
+    var customType = $( this ).data('filter'); // category
+    console.log(customType);
+    console.log(posts.length); // Length of articles
+    
+    posts
+        .hide()
+        .filter(function () {
+            return $(this).data('cat') === customType;
+        })
+        .show();
+});
+$( "#category a.active" ).click(function() { 
+    posts.show();
+});
+
 </script>
 </body>
 </html>

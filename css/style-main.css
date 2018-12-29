@@ -5514,7 +5514,7 @@ blockquote p {
 @media only screen and (min-width: 320px) and (max-width: 449px) {
   .card-1 {
     margin-bottom: 10px;
-    min-height: 216px;
+    min-height: 240px;
   }
 }
 /*
@@ -7799,4 +7799,30 @@ margin-left: 10px;
 }
 .front-index {
   z-index: 9999;
+}
+
+.show-text {
+  display: none;
+}
+.dropdown button {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.dropdown #dropdownMenuButton {
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ff5722;
+  border-radius: 5px;
+  padding: 0 auto;
+}
+.fa-caret-down {
+  font-size: 16px;
+  padding-left: 10px
+}
+.dropdown-menu {
+  background-color: #202020 !important;
+}
+.padding-top {
+  padding-top: 0px;
 }

@@ -16,7 +16,22 @@
 @media only screen and (min-width : 480px) {
 }
 
-@media only screen and (max-width : 400px) {
+@media only screen and (max-width : 480px) {
+	.show-text {
+	  display: block;
+	}
+	.events-venue .text-justify-sm {
+		text-align: justify-all;
+	}
+	.icon-box .icon {
+		display: none;
+	}
+	.hide-text {
+		display: none;
+	}
+	.tp-text-size {
+		font-size: 16px !important;
+	}
 	.menuzord .showhide {
 	    padding-top: 25px;
 	}
@@ -30,7 +45,6 @@
 	  position: relative;
 	  top: -40%;
 	  min-height: 80px;
-	  padding: 0 0 28px;
 	  margin-top: -10px !important;
 	}
 	.stylish-header:before {
@@ -38,16 +52,16 @@
 	  position: absolute;
 	  top: 0;
 	  height: 108%;
-	  left: -650px;
-	  width: 650px;
+	  left: -654px;
+	  width: 655px;
 	}
 	.stylish-header:after {
 	  content: '';
 	  background-color: #202020 !important;
 	  position: absolute;
 	  z-index: 99;
-	  width: 132px;
-	  height: 65px;
+	  width: 128px;
+	  height: 72px;
 	  border-width: 100%;
 	  border-bottom: 7px solid #ff5722;
 	  border-bottom-style
@@ -58,9 +72,41 @@
 	      translateX(-35px)
 	      rotate(-33.5deg);
 	  position: absolute;
-	  top: -34%;
+	  top: -45%;
 	  left: 103%;
 	}
+	.section-title {
+	    margin-bottom: 10px;
+	}
+	.section-title .title {
+	    font-size: 23px;
+	    padding-top: 10px;
+	}
+	.dropdown .portfolio-filter a {
+		display: block;
+		font-size: 14px;
+		color: #FFFFFF !important;
+	    font-weight: 600 !important;
+	    border: none;
+	    margin-bottom: 5px;
+	    line-height: normal;
+	    padding: 5px 10px;
+	}
+	.schedule-call {
+		margin: 0 auto;
+	}
+	.schedule-call .col-sm-4 {
+		padding-left: 20px;
+		width: 25%;
+		display: inline-block;
+	}
+	.schedule-call .col-sm-4 .text-dark-001 {
+		padding-left: 40px;
+	}
+	.schedule-call .col-sm-4 .form-group {
+		display: inline-block;
+	}
+
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -75,7 +121,12 @@
 	  margin-left: 0px;
 	}
 	.modal-md {
-	  width: 100%;
+	  width: 90%;
+	  margin : 0 auto;
+	  z-index: 99999;
+	}
+	.modal-md.schedule-call .col-sm-12{
+		width: 0%;
 	}
 }
 
@@ -85,6 +136,25 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	.stylish-header:before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  height: 108%;
+	  left: -954px;
+	  width: 955px;
+	}
+}
+
+@media only screen and (min-width : 1800px) {
+	.stylish-header:before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  height: 108%;
+	  left: -2554px;
+	  width: 2555px;
+	}
 }
 
 

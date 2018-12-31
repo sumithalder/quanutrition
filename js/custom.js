@@ -938,28 +938,28 @@ var THEMEMASCOT = {};
         /* ---------------------------------------------------------------------- */
         /* -------------------------- Scroll navigation ------------------------- */
         /* ---------------------------------------------------------------------- */
-        TM_navLocalScorll: function() {
-            var data_offset = -60;
-            var $local_scroll = $("#menuzord .menuzord-menu, #menuzord-right .menuzord-menu");
-            if( $local_scroll.length > 0 ) {
-                $local_scroll.localScroll({
-                    target: "body",
-                    duration: 800,
-                    offset: data_offset,
-                    easing: "easeInOutExpo"
-                });
-            }
+        // TM_navLocalScorll: function() {
+        //     var data_offset = -60;
+        //     var $local_scroll = $("#menuzord .menuzord-menu, #menuzord-right .menuzord-menu");
+        //     if( $local_scroll.length > 0 ) {
+        //         $local_scroll.localScroll({
+        //             target: "body",
+        //             duration: 800,
+        //             offset: data_offset,
+        //             easing: "easeInOutExpo"
+        //         });
+        //     }
 
-            var $local_scroll_other = $("#menuzord-side-panel .menuzord-menu, #menuzord-verticalnav .menuzord-menu, #fullpage-nav");
-            if( $local_scroll_other.length > 0 ) {
-                $local_scroll_other.localScroll({
-                    target: "body",
-                    duration: 800,
-                    offset: 0,
-                    easing: "easeInOutExpo"
-                });
-            }
-        },
+        //     var $local_scroll_other = $("#menuzord-side-panel .menuzord-menu, #menuzord-verticalnav .menuzord-menu, #fullpage-nav");
+        //     if( $local_scroll_other.length > 0 ) {
+        //         $local_scroll_other.localScroll({
+        //             target: "body",
+        //             duration: 800,
+        //             offset: 0,
+        //             easing: "easeInOutExpo"
+        //         });
+        //     }
+        // },
 
         /* ---------------------------------------------------------------------------- */
         /* --------------------------- collapsed menu close on click ------------------ */

@@ -374,23 +374,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <div class="section-content pb-10">
           <div class="dropdown show-text">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Filter Testimonials<i class="fa fa-caret-down"></i>
             </button>
             <div id="category" class=" dropdown-menu portfolio-filter font-alt align-center mb-6 0" aria-labelledby="dropdownMenuButton">
-            <a href="#" class="active text-uppercase" data-filter="all">All</a>
-            <a href="#" class="text-uppercase" data-filter="sports">Sports Nutrition</a>
-            <a href="#" class="text-uppercase" data-filter="weightloss">Weight Loss</a>
-            <a href="#" class="text-uppercase" data-filter="weightgain">Weight Gain</a>
-            <a href="#" class="text-uppercase" data-filter="newlife">New Life</a>
-            <a href="#" class="text-uppercase" data-filter="kids">Nutrition for Kids</a>
-            <a href="#" class="text-uppercase" data-filter="you">Nutrition for You</a>
-            <a href="#" class="text-uppercase" data-filter="beauty">Beauty</a>
-            <a href="#" class="text-uppercase" data-filter="wedding">Wedding Bells</a>
-            <a href="#" class="text-uppercase" data-filter="mental">Mental Nutrition</a>
-            <a href="#" class="text-uppercase" data-filter="medical">Medical Nutrition</a>
-            <a href="#" class="text-uppercase" data-filter="corporate"> Corporate Nutrition</a>
-            <a href="#" class="text-uppercase" data-filter="international">International Plan</a>
+            <a onclick="myFunction()" href="#" class="active text-uppercase" data-filter="all">All</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="sports">Sports Nutrition</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="weightloss">Weight Loss</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="weightgain">Weight Gain</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="newlife">New Life</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="kids">Nutrition for Kids</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="you">Nutrition for You</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="beauty">Beauty</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="wedding">Wedding Bells</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="mental">Mental Nutrition</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="medical">Medical Nutrition</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="corporate"> Corporate Nutrition</a>
+            <a onclick="myFunction()" href="#" class="text-uppercase" data-filter="international">International Plan</a>
           </div>
           </div>
            <!-- Portfolio Filter -->
@@ -1351,6 +1351,16 @@ $( "#category a.active" ).click(function() {
     posts.show();
 });
 
+</script>
+<script>
+  function myFunction() {
+  var x = document.getElementById("category");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 </script>
 </body>
 </html>

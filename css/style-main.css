@@ -3344,10 +3344,13 @@ form .error {
 }
 @media only screen and (max-width: 479px) {
   .gallery-isotope .gallery-item {
-    width: 100% !important;
+    width: 50% !important;
+  }
+  .gallery-isotope .gallery-item h5 {
+    font-size: 12px !important;
   }
   .gallery-isotope .gallery-item.wide {
-    width: 100% !important;
+    width: 50% !important;
   }
 }
 /* -------- Portfolio Isotop Overlay Effect ---------- */
@@ -7804,9 +7807,9 @@ margin-left: 10px;
 .show-text {
   display: none;
 }
-.dropdown button {
-  margin-bottom: 20px;
+.dropdown {
   text-align: center;
+  margin: 0 auto 20px auto;
 }
 .dropdown #dropdownMenuButton {
   color: #fff !important;
@@ -7822,6 +7825,9 @@ margin-left: 10px;
 }
 .dropdown-menu {
   background-color: #202020 !important;
+  text-align: center;
+  width: 250px;
+  margin: 0 25px 0 25px;
 }
 .padding-top {
   padding-top: 0px;

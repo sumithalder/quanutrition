@@ -4585,6 +4585,7 @@ funfactstyle-1 h4 {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
+  height: 100%;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -7785,6 +7786,9 @@ table {
 }
 .modal-body {
   background-color: #202020;
+}
+.menuzord-menu ul.dropdown {
+  height: 100%;
 }
 .menuzord-menu ul.dropdown li a b{
   font-weight: 700;

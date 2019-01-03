@@ -147,32 +147,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-  .sidebar-box {
-    max-height: 180px;
-    position: relative;
-    overflow: hidden;
-  }
-  .sidebar-box .read-more { 
-    position: absolute; 
-    bottom: 0; 
-    left: 0;
-    width: 100%; 
-    text-align: center; 
-    margin: 0; padding: 30px 0; 
-    
-    /* "transparent" only works here because == rgba(0,0,0,0) */
-    background-image: linear-gradient(to bottom, transparent, grey);
-  }
-  .sidebar-box p {
-    color: #333;
-  }
-  .sidebar-box .read-more a {
-    color: #202020;
-    font-weight: 700;
-    position: absolute;
-    bottom: 8%;
-    left: 35%;
-  }
   .height_space_2 {
     content: "";
     display: block;
@@ -203,6 +177,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   }
 
+}
+</style>
+<style>
+  .sidebar-box {
+    position: relative;
+    overflow: hidden;
+  }
+  .sidebar-box .read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 20px 0; 
+    
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, grey);
+  }
+  .sidebar-box {
+    color: #333;
+  }
+  .sidebar-box .read-more .collapsed,.expanded {
+    color: #202020 ;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8%;
+    left: 30%;
+  }
+  [aria-expanded="false"] > .expanded,
+  [aria-expanded="true"] > .collapsed {
+    display: none;
+  }
+</style>
+<style>
+  .masonry { /* Masonry container */
+    -webkit-column-count: 6;
+  -moz-column-count:6;
+  column-count: 6;
+  -webkit-column-gap: .8em;
+  -moz-column-gap: .8em;
+  column-gap: .8em;
+   margin: .5em;
+    padding: 0;
+    font-size: .85em;
+}
+.item {
+    display: inline-block;
+    background: #fff;
+    padding: .1em;
+    width: 100%;
+  -webkit-transition:1s ease all;
+}
+.item img{max-width:100%;}
+
+@media only screen and (max-width: 320px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    .
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+    .masonry {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+}
+@media only screen and (min-width: 1201px) {
+    .masonry {
+        -moz-column-count: 6;
+        -webkit-column-count: 6;
+        column-count: 6;
+    }
 }
 </style>
 </head>
@@ -435,9 +492,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </section>
     
+
     <!-- Section: Team -->
     <section id="trainer" class="bg-light">
-      <div class="container pb-0">
+      <div class="container">
         <div class="section-title text-center">
           <div class="row">
             <div class="col-md-8">
@@ -446,99 +504,168 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
         <div class="section-content pb-10">
-          <div class="row-carousel owl-carousel-5col pb-30">
-            <div class="item mb-30 mb-sm-30">
+          <div class="masonry pb-30">
+            
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/30.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Gabriello</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Model</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">My nutrition sessions with Minacshi have been enjoyable and enlightening. I always believed that I was following a healthy diet but after meeting Minacshi I realised how far off course my diet actually</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id17"> was. She brought a wealth of knowledge both in terms of practical dietary suggestions, but also in explaining the biology behind how different foods affect your body. She is a one of a kind nutritionist. Minacshi did a great job of diagnosing nutritional areas which I could adjust to reach my goals. By taking the time to understand my lifestyle and goals, she was able to give me great recommendations which I’ve enjoyed. My energy levels have improved and she has also helped me achieve a better looking leaner body. I would recommend Qua. You will be pleased.<br>&nbsp;</p>
+                    <a href="#block-id17" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id17"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="../images/female.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Kripa Williams</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You </h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">An excellent experience where I learned to integrate healthier eating habits in to my lifestyle. After almost four years of being with Qua, their ideologies are now part of my life.The nutritionists are well informed and very dedicated to their work. Kudos Qua! You will always be social to me.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Damini Puri</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Kripa Williams</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">Great team of nutritionists helping you achieve your health and lifestyle goals.Working with Lygia was a pleasure ! She is extremely understanding , accommodating and knowledgeable. She goes out of her way to help you with any questions you may have and is very responsive.Highly reccomend !</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/gallery/22.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Mr. Yegnesh </h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">As regards to the feedback on the service and other parameters, I am glad that your services are from a dedicated team and always wiling to help the client reach their goal. The nutrition service is excellent and you are made comfortable and allowed to go slow on the diet. Appreciate the time and effort in understanding the requirement of the client.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/gallery/36.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Pradeep Ram</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">QUA Nutrition helped me get back into shape as I was struggling with my diet although I was training intensely... I was following a muscle building diet downloaded from the net but it never helped me and I realized that my body type is different and my dietician customized it accordingly. Good job team :)</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Sharadha Ramachandra</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">I have been a client of QUA for over a year now and would definitely recommend this place if you want a holistic and long-term solution to your food and nutrition linked goals. The team is fairly experienced and help identifying issues and solutions for your health problems and develop an understanding of your actual qualitative and quantitive food requirements and how certain super-foods function.A special mention and shout out to my nutritionist Sahiba Juneja who has been integral in this nutrition and food journey of mine for the last year. She really helped me overcome my food inhibitions and address my health concerns and ensured she followed up regularly and gave clear instructions and substitutes where required. My wholehearted and grateful thank you.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Khayati patel</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">After the initial hesitancy on working with nutritionists (misconceptions about going on diet or eating less food etc.), I was referred to Qua by my mother and I must say that the plan created for me was amazingly customised and extremely detailed. Lygia (my nutritionist) was professional and diligent in her approach, patiently listening to my food habits and cravings and suggesting healthy alternatives, where needed.I am satisfied with the results and hope to continue my association with Qua in future.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/gallery/41.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Daegal Dodinho</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">It's been a little over a month now since I started a 3-month package with Qua Nutrition, and I have never felt this good in the last 10 years at least! I know the man behind this company as a personal friend and hence knew that this would be no Con job. What really impressed me is that in order to make sure that I was serious about the whole experience, he refused to counsel me directly, and instead handed my sessions to one of their trained Nutritionists/Dietitians. I must say that I have been tremendously impressed with the seriousness with which they take their work and their levels of involvement with me. I am based in Goa and hence do not have the luxury of face to face meetings with the team. However that has been of no hindrance, as for right from the start, they coordinated a home visit by a lab to collect all the blood and urine samples required to begin the tests on which their analysis of my health and metabolism patterns would be based. Less than a week later, I had a 2 and a half hour phone session wherein my lab reports were explained, important health issues highlighted, and my detailed dietary intake patterns and exercise patterns were discussed. Following that a detailed dietary plan was provided and explained along with recommended supplements to cope with deficiencies discovered, and to target specific aims such as fat loss etc. What was really nice was that the new recommendations were based on my existing dietary habits, incorporating the types of foods I would usually prefer to eat, adding simple changes that I would easily manage (such as fruits between meals etc.) and very importantly, an awareness building of the different types of food categories (protein/carbs/vitamins etc.) and their recommended quantities to provide for a balanced diet as well as a fat burning diet. I for one made it a point to record details of all exercises done, food and their quantities are taken in on a daily basis, and provided this to my dietitian on a weekly basis. Every week small changes were recommended and incorporated, helping me become more aware of the gaps between my meals, the healthy substitutes for between meal snacks, and the importance of the need to exercise more. I have lost about 4 kilograms so far and have begun to get a far more toned and athletic body than what has been over the last few years. With another two months to go, I am really looking forward to the results of this program and am also happy that eating healthy and eating proper portions is coming more and more naturally to me. For the money put into this program, I can confidently say that it is worth well more than what it cost me as I have a healthier fit self to live with now! Thanks, Ryan Fernando and the Qua Nutrition team!</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">An excellent experience where I learned to integrate healthier eating habits in to my lifestyle. After almost four years of being with Qua, their ideologies are now part of my life.The nutritionists </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id339">are well informed and very dedicated to their work. Kudos Qua! You will always be social to me.<br>&nbsp;</p>
+                    <a href="#block-id339" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id339"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/21.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Aniruddha Budhya</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For you</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I went to Qua Nutrition and met my dietitian Anjum in April with 89 kgs and I am 72 kgs now (October, 2014) with a total drop of 5% of body fat. I have renewed my plan to Genetic Testing now. I would definitely </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id002">recommend this clinic to all. My personal experience. Thank you Qua Nutrition and Anjum.<br>&nbsp;</p>
+                    <a href="#block-id002" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id002"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/22.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Mr. Yegnesh</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition for you</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">As regards to the feedback on the service and other parameters, I am glad that your services are from a dedicated team and always wiling to help the client reach their goal. The nutrition service</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id001">. is excellent and you are made comfortable and allowed to go slow on the diet. Appreciate the time and effort in understanding the requirement of the client.<br>&nbsp;</p>
+                    <a href="#block-id001" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id001"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/23.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Mr. Vickram Murthy</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">Thanks for the plan, it seems to be working well so far. I would also like to say thanks for spending the time and patience in handling my diet plan, that is what I like about Qua, the structuring of </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id16">the plan based on our day to day routine and food habits, it makes it so much easier to accommodate.<br>&nbsp;</p>
+                    <a href="#block-id16" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id16"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Mahua Chowdhury</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">QUA Nutrition has helped me throughout the years in eating right. I have an outline made especially during my opposition. The outline made for me has additionally pushed me to increase my tallness.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/31.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Kartikeyan VS</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">This is one of the best thing happened in my life , that changed the way i perceive health and fitness. They helped me to reduce my body fat and increase the muscle mass. Their scientific approach</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id18"> paved way to solve my health issues with ease. I should appreciate the effort of Ms. Bhavani who regularly followed up on regime and reviewed it constantly. Now planning to go for a yearly plan.<br>&nbsp;</p>
+                    <a href="#block-id18" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id18"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/32.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Bharath DV</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">"Is a Fitness Freak I was always worried about what I must eat because although my musculature was good I could get rid of my Tummy. This is when I met QUA Nutrition and they Enrolled me into</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id19">  a Nutrition Program with A Nutritionist in the Team and the results were awesome. My Tummy Gradually reduced in inches regularly and now am happy to flaunt a 4 pack. My next goal is to get a six pack in the next 60 days so Bring it on :) Thanks, QUA Nutrition."<br>&nbsp;</p>
+                    <a href="#block-id19" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id19"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/gallery/36.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Pradeep Ram</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition for You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">"QUA Nutrition helped me get back into shape as I was struggling with my diet although I was training intensely... I was following a muscle building diet downloaded from the net ut it never helped me</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id23"> and I realized that my body type is different and my dietician customized it accordingly. Good job team :)"<br>&nbsp;</p>
+                    <a href="#block-id23" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id23"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Khayati Patel</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">After the initial hesitancy on working with nutritionists (misconceptions about going on diet or eating less food etc.), I was referred to Qua by my mother and I must say that the plan </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id337">created for me was amazingly customised and extremely detailed. Lygia (my nutritionist) was professional and diligent in her approach, patiently listening to my food habits and cravings and suggesting healthy alternatives, where needed.I am satisfied with the results and hope to continue my association with Qua in future.<br>&nbsp;</p>
+                    <a href="#block-id337" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id337"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Jessie R</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">QUA Nutrition is the best place to stay healthy and happy. The dedicated staff takes health very seriously. Lygia is ready to help with great suggestions. Now I enjoy parties without feeling guilty anymore.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Damini Puri</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Nutrition For You</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">Great team of nutritionists helping you achieve your health and lifestyle goals.Working with Lygia was a pleasure ! She is extremely understanding , accommodating and knowledgeable. She goes</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id338"> out of her way to help you with any questions you may have and is very responsive.Highly reccomend !<br>&nbsp;</p>
+                    <a href="#block-id338" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id338"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
           </div>
         </div>
       </div>
@@ -826,39 +953,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script> 
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
 <script>
-  var $el, $ps, $up, totalHeight;
-
-  $(".sidebar-box .button").click(function() {
-        
-    totalHeight = 0
-
-    $el = $(this);
-    $p  = $el.parent();
-    $up = $p.parent();
-    $ps = $up.find("p:not('.read-more')");
+  $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 150;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
     
-    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-    $ps.each(function() {
-      totalHeight += $(this).outerHeight();
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
     });
-          
-    $up
-      .css({
-        // Set height to prevent instant jumpdown when max height is removed
-        "height": $up.height(),
-        "max-height": 9999
-      })
-      .animate({
-        "height": totalHeight
-      });
-    
-    // fade out read-more
-    $p.fadeOut();
-    
-    // prevent jump-down
-    return false;
-      
-  });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
 </script>
 </body>
 </html>

@@ -3222,6 +3222,9 @@ form .error {
 .portfolio-filter #wedding {
   border-left: 4px solid #ff5722;
 }
+#category #wedding1 {
+  border-left: 4px solid #ff5722;
+}
 .portfolio-filter a.active,
 .portfolio-filter a:hover {
   color: #fff !important;

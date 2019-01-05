@@ -147,11 +147,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-  p {
+ p {
     text-align: justify;
   }
   .sidebar-box {
-    max-height: 180px;
     position: relative;
     overflow: hidden;
   }
@@ -161,29 +160,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     left: 0;
     width: 100%; 
     text-align: center; 
-    margin: 0; padding: 30px 0; 
+    margin: 0; padding: 20px 0; 
     
     /* "transparent" only works here because == rgba(0,0,0,0) */
     background-image: linear-gradient(to bottom, transparent, grey);
   }
-  .sidebar-box p {
+  .sidebar-box {
     color: #333;
   }
-  .sidebar-box .read-more a {
-    color: #202020;
+  .sidebar-box .read-more .collapsed,.expanded {
+    color: #202020 ;
     font-weight: 700;
     position: absolute;
     bottom: 8%;
-    left: 35%;
+    left: 30%;
   }
-  .height_space_2 {
-    content: "";
-    display: block;
-    height: 45px;
+  [aria-expanded="false"] > .expanded,
+  [aria-expanded="true"] > .collapsed {
+    display: none;
   }
+</style>
+<style>
+  .masonry { /* Masonry container */
+    -webkit-column-count: 6;
+  -moz-column-count:6;
+  column-count: 6;
+  -webkit-column-gap: .8em;
+  -moz-column-gap: .8em;
+  column-gap: .8em;
+   margin: .5em;
+    padding: 0;
+    font-size: .85em;
+}
+.item {
+    display: inline-block;
+    background: #fff;
+    padding: .1em;
+    width: 100%;
+  -webkit-transition:1s ease all;
+}
+.item img{max-width:100%;}
+
+@media only screen and (max-width: 320px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    .
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+    .masonry {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+}
+@media only screen and (min-width: 1201px) {
+    .masonry {
+        -moz-column-count: 6;
+        -webkit-column-count: 6;
+        column-count: 6;
+    }
+}
 </style>
 </head>
 <body class="dark">
+<div class="load_container">
+  <div class="loader"></div>
+
+</div>
 <div id="wrapper">
 
   
@@ -344,9 +398,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </section>
 
+
     <!-- Section: Team -->
     <section id="trainer" class="bg-light">
-      <div class="container pb-0">
+      <div class="container">
         <div class="section-title text-center">
           <div class="row">
             <div class="col-md-8">
@@ -355,72 +410,166 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
         <div class="section-content pb-10">
-          <div class="row-carousel owl-carousel-5col pb-30">
-            <div class="item mb-30 mb-sm-30">
+          <div class="masonry pb-30">
+            
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="../images/male.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Avinash Kumar</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain </h5>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Avinash Kumar</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">It was a pleasure to meet Ms. Jeanne Ribeiro. I’ve been a person struggling being underweight most of my life and had tried nearly every little trick in the book to gain some weight. This was when I consulted her and she was very patient to hear me out and understand my goals. She had a practical approach and tweaked my nutrition in tiny effective ways without forcing me to change my ways of eating completely. The results were evident within a few weeks and that was proof enough to highlight her depth of knowledge despite the practicality and ease of her instructions. I’ve never felt more healthy and have a lot of regard for the changes and insights she’s put across effortlessly.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">It was a pleasure to meet Ms. Jeanne Ribeiro. I’ve been a person struggling being underweight most of my life and had tried nearly every little trick in the book to gain some weight. This was</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id438"> when I consulted her and she was very patient to hear me out and understand my goals. She had a practical approach and tweaked my nutrition in tiny effective ways without forcing me to change my ways of eating completely. The results were evident within a few weeks and that was proof enough to highlight her depth of knowledge despite the practicality and ease of her instructions. I’ve never felt more healthy and have a lot of regard for the changes and insights she’s put across effortlessly.<br>&nbsp;</p>
+                    <a href="#block-id438" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id438"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item mb-30 mb-sm-30">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
                   <img class="img-fullwidth" src="../images/female.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Sonam Priya</h4>
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Damini Puri</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">I was struggling to gain weight for very long time. I approached Qua Nutrition and it helped .The first advice I got was not to eat blindily everything as it may lead to medical conditions. The diet chart was made on my preferred foods, blood parameters and lifestyle. I have gained 7 kgs since then.I have achieved my ideal body weight and I am now able to maintain it too.Thankyou Shila Rai for your support and guidance.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">Great team of nutritionists helping you achieve your health and lifestyle goals.Working with Lygia was a pleasure ! She is extremely understanding , accommodating and knowledgeable. She goes</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id338"> out of her way to help you with any questions you may have and is very responsive.Highly reccomend !<br>&nbsp;</p>
+                    <a href="#block-id338" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id338"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item mb-30 mb-sm-30">
+            
+            <div class="item" data-cat="weightloss">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Shubh Kumar</h4>
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Sonam Priya</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">QUA Nutrition helped me a lot to gain weight as I was very skinny. Her diet included all the daily nutrition requirements. She gave me a diet which matched up with my daily routine. Having Sneha Shukla as my dietician was my best decision.</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I was struggling to gain weight for very long time. I approached Qua Nutrition and it helped .The first advice I got was not to eat blindily everything as it may lead to medical conditions. The diet </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id14">chart was made on my preferred foods, blood parameters and lifestyle. I have gained 7 kgs since then.I have achieved my ideal body weight and I am now able to maintain it too.Thankyou Shila Rai for your support and guidance.<br>&nbsp;</p>
+                    <a href="#block-id14" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id14"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item mb-30 mb-sm-30">
+            <div class="item" data-cat="you">
               <div class="bg-img-box maxwidth400" style="background-color: #fff;">
                 <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Kenneth Cardozo</h4>
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Jessie R</h5>
                   <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
                   <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center">I consulted Dietician Wellishia for a weight gain program. I was allergic to few food items and Wellishia clearly taught me how to avoid those foods by planing my diet accordingly to my taste preference. She advised me very well & also tackled my problems like acidity, fatigue & digestive issues. I gained 5 kgs in 45 days. Overall I am very extremely happy with the consultation which has kept me motivated and live a healthy lifestyle!</p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item mb-30 mb-sm-30">
-              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
-                <div class="photo" style="padding: 2px;">
-                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
-                  <h4 class="text-gray mt-5 mb-5 text-center">Ali Tahir</h4>
-                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
-                  <div class="sidebar-box">
-                    <p class="mt-0 mb-0 p-10 text-center pb-80">I gain my weight about 8 kg within 3 months and feels energetic. Long live qua nutrition.</p>
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">QUA Nutrition is the best place to stay healthy and happy. The dedicated staff takes health very seriously. Lygia is ready to help with great suggestions. Now I enjoy parties without feeling guilty anymore.</p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div class="item" data-cat="weightloss">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Shubh Kumar</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">QUA Nutrition helped me a lot to gain weight as I was very skinny. Her diet included all the daily nutrition requirements. She gave me a diet which matched up with my daily routine. </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id321">Having Sneha Shukla as my dietician was my best decision.<br>&nbsp;</p>
+                    <a href="#block-id321" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id321"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Kenneth Cardozo</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I consulted Dietician Wellishia for a weight gain program. I was allergic to few food items and Wellishia clearly taught me how to avoid those foods by planing my diet accordingly to my taste </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id337">preference. She advised me very well & also tackled my problems like acidity, fatigue & digestive issues. I gained 5 kgs in 45 days. Overall I am very extremely happy with the consultation which has kept me motivated and live a healthy lifestyle!<br>&nbsp;</p>
+                    <a href="#block-id337" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id337"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Ali Tahir</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-80">I gain my weight about 8 kg within 3 months and feels energetic. Long live qua nutrition.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="item" data-cat="weightloss">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Varsha Rajan</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">They have changed the way I feel about food, they educate you a lot and you feel empowered to make the right choices. My nutritionist was very patient with me while I went through the lifestyle</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id28"> change of eating on time, small portions, avoiding Thyroid resresist food, etc. The plans are extremely customized, discussed after full body analysis and blood test results. I went there after seeing my colleague recover from high sugar related issues, he lost a lot of fat and started looking upto 10 years younger. If you are looking for improving overall health then Qua is the place. The food plan they provide is a lot of work, so be prepared to embrace the change. They do cost much more than regular dietician in hospitals, but worth the money.<br>&nbsp;</p>
+                    <a href="#block-id28" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id28"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="weightloss">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/female.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Khayati Patel</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">After the initial hesitancy on working with nutritionists (misconceptions about going on diet or eating less food etc.), I was referred to Qua by my mother and I must say that the plan </p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id29">created for me was amazingly customised  and extremely detailed. Lygia (my nutritionist) was professional and diligent in her approach, patiently listening to my food habits and cravings and suggesting healthy alternatives, where needed.I am satisfied with the results and hope to continue my association with Qua in future.<br>&nbsp;</p>
+                    <a href="#block-id29" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id29"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Tyrone Machado</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-40">Smeetal is a young and amazing dietitian who helped me gain weight through overseas consultation. It was helpful<br>&nbsp;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">N.S.Vishnu</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">I went to Qua nutrition to improve my overall energy , cognitive performance and gain healthy weight. Dieticians Lakshmi and Safa were really helpful and gave me customised nutrition plan</p><p class="mt-0 mb-0 p-10 pt-0 text-center collapse" id="block-id19"> which was practical and easy to follow. Highly recommended.<br>&nbsp;</p>
+                    <a href="#block-id19" class="read-more" data-toggle="collapse" aria-expanded="false" aria-controls="block-id19"><span class="collapsed">Show more</span><span class="expanded">Show Less</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-cat="you">
+              <div class="bg-img-box maxwidth400" style="background-color: #fff;">
+                <div class="photo" style="padding: 2px;">
+                  <img class="img-fullwidth" src="../images/male.jpg" alt="">
+                  <h5 class="text-gray text-dark-01 mt-5 mb-5 text-center">Mahua Chowdhury</h5>
+                  <h5 class="text-theme-colored mt-0 mb-5 text-center">Weight Gain</h5>
+                  <div class="sidebar-box">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">
+                    <p class="pt-0 mt-0 mb-0 p-10 text-center pb-0">QUA Nutrition has helped me throughout the years in eating right. I have an outline made especially during my opposition. The outline made for me has additionally pushed me to increase my tallness.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
           </div>
         </div>
       </div>
@@ -436,44 +585,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-sm-6 col-md-3">
             <h3 class="mt-0 mb-30">Quick Contact Form</h3>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="#" method="post">
+            <form id="contact_form" name="contact_form" class="" method="post">
 
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="true">
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                        <input id="form_email" name="form_email" class="form-control email" type="email" placeholder="Enter Email" >
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                        <input id="form_phone" name="form_phone" class="form-control" type="number" placeholder="Enter Phone" required="true">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-                
+
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_subject" name="form_subject" class="form-control required" type="text" placeholder="Enter Your City">
+                    <input id="form_subject" name="form_subject" class="form-control" type="text" placeholder="Enter Your City">
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
-                <textarea id="form_message" name="form_message" class="form-control required" rows="3" placeholder="Enter Message"></textarea>
+                <textarea id="form_message" name="form_message" class="form-control" rows="3" placeholder="Enter Message"></textarea>
               </div>
               <div class="form-group">
                 <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
+                <button id="quick_submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
                 <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
               </div>
             </form>
@@ -602,30 +751,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <div class="modal-body">
-        <form id="contact_form" name="contact_form" class="" action="#" method="post">
+       <form id="schedule_form" name="contact_form" class="" method="post">
 
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <input id="form_name" name="form_name" class="form-control required" type="text" placeholder="Enter Name" required="true">
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                        <input id="form_email" name="form_email" class="form-control email" type="email" placeholder="Enter Email">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                        <input id="form_phone" name="form_phone" class="form-control required" type="text" placeholder="Enter Phone" required="true">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-                
+
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
@@ -653,7 +802,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <select id="bmode" name="bmode" class="form-control" required="" aria-required="true" style="width: 100%;color: #ccc;">
+                    <select id="bmode" name="bmode" class="form-control" style="width: 100%;color: #ccc;">
                       <option value="" style="background: #000;color: #ccc;">Preferred mode of consultation:*</option>
                       <option value="Phone" style="background: #000;color: #ccc;">Phone</option>
                       <option value="Email" style="background: #000;color: #ccc;">Email</option>
@@ -666,11 +815,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="form-group">
                 <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
               </div>
-              <div class="row">
+              <div class="row schedule-call">
                 <div class="col-sm-4">
                   <div class="form-group">
                     <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Comfirm</button>
+                    <button id="submit_schedule"class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait..." data-dismiss="modal">Comfirm</button>
                   </div>
                 </div>
                 <div class="col-sm-4 text-center pt-10">
@@ -687,6 +836,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  $('#submit_schedule').on('click', function(e){
+               e.preventDefault();
+               var url = "https://quanutritiondemo1.herokuapp.com/schedule_call/"
+                var name = $('#schedule_form #form_name').val();
+                var phone = $('#schedule_form #form_phone').val();
+
+                if(name == "" || phone == ""){
+                    alert("Required fields should be filled!")
+                }
+                else if(phone.length!=10){
+                  alert("Invalid phone no!")
+                }
+                else{
+                    $('.load_container').show();
+$('.dark').addClass('no_scroll');
+                var form_data = $("#schedule_form").serialize();
+                $.ajax({
+                  type:"POST",
+                  data:form_data,
+                  url:url,
+                  crossDomain: true,
+                  success:function(result){
+                      $('.load_container').hide();
+$('.dark').removeClass('no_scroll');
+                      if(result.status == 'ok'){
+                          alert(result.msg);
+                      }else{
+                        alert(result.msg)
+                      }
+                  }
+                });
+              }
+            });
+ $('.modal').on('hidden.bs.modal', function(){
+                $(this).find('form')[0].reset();
+            });
+</script>
+
 
 <!-- Footer Scripts --> 
 <!-- JS | Calendar Event Data --> 
@@ -707,39 +895,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script> 
 <script type="text/javascript" src="../js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
 <script>
-  var $el, $ps, $up, totalHeight;
-
-  $(".sidebar-box .button").click(function() {
-        
-    totalHeight = 0
-
-    $el = $(this);
-    $p  = $el.parent();
-    $up = $p.parent();
-    $ps = $up.find("p:not('.read-more')");
+  $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 150;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more >";
+    var lesstext = "Show less";
     
-    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-    $ps.each(function() {
-      totalHeight += $(this).outerHeight();
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
     });
-          
-    $up
-      .css({
-        // Set height to prevent instant jumpdown when max height is removed
-        "height": $up.height(),
-        "max-height": 9999
-      })
-      .animate({
-        "height": totalHeight
-      });
-    
-    // fade out read-more
-    $p.fadeOut();
-    
-    // prevent jump-down
-    return false;
-      
-  });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
 </script>
+<script type="text/javascript" src="../js/quick_form.js"></script>
 </body>
 </html>

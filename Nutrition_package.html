@@ -171,6 +171,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <![endif]-->
 </head>
 <body class="dark">
+<div class="load_container">
+  <div class="loader"></div>
+
+</div>
 <div id="wrapper">
 
   
@@ -458,24 +462,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-sm-6 col-md-3">
             <h3 class="mt-0 mb-30">Quick Contact Form</h3>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="#" method="post">
+                        <!-- Contact Form -->
+          <form id="contact_form" name="contact_form" class="" method="post">
 
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="true">
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                        <input id="form_email" name="form_email" class="form-control email" type="email" placeholder="Enter Email" >
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                        <input id="form_phone" name="form_phone" class="form-control" type="number" placeholder="Enter Phone" required="true">
                       </div>
                     </div>
                   </div>
@@ -485,45 +490,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_subject" name="form_subject" class="form-control required" type="text" placeholder="Enter Your City">
+                    <input id="form_subject" name="form_subject" class="form-control" type="text" placeholder="Enter Your City">
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
-                <textarea id="form_message" name="form_message" class="form-control required" rows="3" placeholder="Enter Message"></textarea>
+                <textarea id="form_message" name="form_message" class="form-control" rows="3" placeholder="Enter Message"></textarea>
               </div>
               <div class="form-group">
                 <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
+                <button id="quick_submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
                 <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
               </div>
             </form>
 
-            <!-- Contact Form Validation-->
-            <script type="text/javascript">
-              $("#contact_form").validate({
-                submitHandler: function(form) {
-                  var form_btn = $(form).find('button[type="submit"]');
-                  var form_result_div = '#form-result';
-                  $(form_result_div).remove();
-                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                  var form_btn_old_msg = form_btn.html();
-                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                  $(form).ajaxSubmit({
-                    dataType:  'json',
-                    success: function(data) {
-                      if( data.status == 'true' ) {
-                        $(form).find('.form-control').val('');
-                      }
-                      form_btn.prop('disabled', false).html(form_btn_old_msg);
-                      $(form_result_div).html(data.message).fadeIn('slow');
-                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                    }
-                  });
-                }
-              });
-            </script>
+    
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
@@ -624,30 +606,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
       <div class="modal-body">
-        <form id="contact_form" name="contact_form" class="" action="#" method="post">
+        <form id="schedule_form" name="contact_form" class="" method="post">
 
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <input id="form_name" name="form_name" class="form-control required" type="text" placeholder="Enter Name" required="true">
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                        <input id="form_email" name="form_email" class="form-control email" type="email" placeholder="Enter Email">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                        <input id="form_phone" name="form_phone" class="form-control required" type="text" placeholder="Enter Phone" required="true">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-                
+
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
@@ -675,7 +657,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <select id="bmode" name="bmode" class="form-control" required="" aria-required="true" style="width: 100%;color: #ccc;">
+                    <select id="bmode" name="bmode" class="form-control" style="width: 100%;color: #ccc;">
                       <option value="" style="background: #000;color: #ccc;">Preferred mode of consultation:*</option>
                       <option value="Phone" style="background: #000;color: #ccc;">Phone</option>
                       <option value="Email" style="background: #000;color: #ccc;">Email</option>
@@ -692,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="col-sm-4">
                   <div class="form-group">
                     <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Comfirm</button>
+                    <button id="submit_schedule"class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait..." data-dismiss="modal">Comfirm</button>
                   </div>
                 </div>
                 <div class="col-sm-4 text-center pt-10">
@@ -709,7 +691,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  $('#submit_schedule').on('click', function(e){
+               e.preventDefault();
+               var url = "https://quanutritiondemo1.herokuapp.com/schedule_call/"
+                var name = $('#schedule_form #form_name').val();
+                var phone = $('#schedule_form #form_phone').val();
 
+                if(name == "" || phone == ""){
+                    alert("Required fields should be filled!")
+                }
+                else if(phone.length!=10){
+                  alert("Invalid phone no!")
+                }
+                else{
+                    $('.load_container').show();
+$('.dark').addClass('no_scroll');
+                var form_data = $("#schedule_form").serialize();
+                $.ajax({
+                  type:"POST",
+                  data:form_data,
+                  url:url,
+                  crossDomain: true,
+                  success:function(result){
+                      $('.load_container').hide();
+$('.dark').removeClass('no_scroll');
+                      if(result.status == 'ok'){
+                          alert(result.msg);
+                      }else{
+                        alert(result.msg)
+                      }
+                  }
+                });
+              }
+            });
+   $('.modal').on('hidden.bs.modal', function(){
+                $(this).find('form')[0].reset();
+            });
+</script>
 <!-- Footer Scripts --> 
 <!-- JS | Calendar Event Data --> 
 <script src="js/calendar-events-data.js"></script> 
@@ -728,6 +747,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script> 
 <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script> 
 <script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+<script type="text/javascript" src="js/quick_form.js"></script>
 </body>
 
 <!-- Mirrored from thememascot.net/demo/html/health-beauty/sports-trainer/v2.0/demo/index-dark-mp-layout1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Dec 2018 09:39:19 GMT -->

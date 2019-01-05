@@ -2371,7 +2371,7 @@ form input[type="date"]:focus,
 form input[type="color"]:focus,
 form select:focus,
 form textarea:focus {
-  color: #404040;
+  color: #fff;
   border-color: rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -7845,4 +7845,59 @@ margin-left: 10px;
 }
 .padding-top {
   padding-top: 0px;
+}
+
+.loader {
+    border: 16px solid #00000080;
+    border-radius: 50%;
+    border-top: 16px solid #ec511f;
+    border-bottom: 16px solid #ec511f;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+    position: fixed;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    margin: 0 auto;
+}
+
+.load_container.act {
+    display: block;
+}
+
+.load_container {
+    display: none;
+    text-align: center;
+    margin: 250px auto;
+    position: absolute;
+    z-index: 10000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.no_scroll {
+    overflow: hidden;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
